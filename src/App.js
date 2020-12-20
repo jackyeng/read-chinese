@@ -1,9 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import Main from './components/Main';
+import Test from './components/Test';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Practice from './components/Practice';
+import Characters from './components/Characters';
+import Typer from './components/Typer';
+import About from './components/About';
 
 function App() {
   return (
@@ -15,11 +19,11 @@ function App() {
           </div>
           <br/>
           <div className="App-page">
-            <Route path="/practice"/>
-            <Route path="/test" component={Main}/>
-            <Route path="/typeassist"/>
-            <Route path="/characterlist"/>
-            <Route path="/about"/>
+            <Route path="/practice" component={Practice}/>
+            <Route path="/test" component={Test}/>
+            <Route path="/typer" component={Typer}/>
+            <Route path="/characters" component={Characters}/>
+            <Route path="/about" component={About}/>
           </div>
 
         </Router>

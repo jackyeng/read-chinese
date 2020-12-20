@@ -1,6 +1,7 @@
 
 // Requiring fs module in which 
 // readFile function is defined. 
+const { clear } = require('console');
 const fs = require('fs') 
  
 function removeAccent (str) {
@@ -20,7 +21,7 @@ function removeAccent (str) {
 
     return str;
 };
-
+var characterObjects = "";
 // Reading data in utf-8 format 
 // which is a type of character set. 
 // Instead of 'utf-8' it can be  
@@ -33,7 +34,7 @@ fs.readFile('Input.txt', 'utf-8', (err, data) => {
     var lines = data.split('\n');
    
     var i;
-    for (i = 0; i < 100; i ++){
+    for (i = 0; i < 300; i ++){
         var row = lines[i].split('\t');
         const chinese = {
             character: row[1],
@@ -42,8 +43,15 @@ fs.readFile('Input.txt', 'utf-8', (err, data) => {
             meaning: row[2],
             rank: row[0],
         }
-        
+        characterObjects += chinese;
+        characterObjects += ",";
         console.log(chinese);
         console.log(",");
     };
 }); 
+
+fs.writeFile('CharacterObjects.txt', characterObjects, (err) => { 
+      
+    // In case of a error throw err. 
+    if (err) throw err; 
+}) 

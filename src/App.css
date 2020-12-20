@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #212121;
+  background-color: #2e2d2d;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -30,7 +30,9 @@
 
 .App-navbar {
   margin-top: -450px;
-  position: fixed;
+  position: absolute;
+
+  padding-right: 55px;
 }
 
 .App-page {

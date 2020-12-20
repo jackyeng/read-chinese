@@ -3,7 +3,6 @@ import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import Link from '@material-ui/core/Link';
 import {makeStyles} from '@material-ui/core/styles';
 import './../index.css';
-import download from './download.jpeg';
 import logo from './logo.png';
 
 const useStyles = makeStyles((theme) => ({
@@ -18,9 +17,9 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 export default function ActiveLastBreadcrumb() {
-  const classes = useStyles;
+ 
   return (
-    <Breadcrumbs separator="" aria-label="breadcrumb">
+    <Breadcrumbs separator="     " aria-label="breadcrumb">
       <Link className="custom-link" color="white" href="/">
         <img className="home-logo" src={logo} alt=""></img>
       </Link>
