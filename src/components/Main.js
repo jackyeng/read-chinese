@@ -27,7 +27,14 @@ const useStyles = makeStyles((theme) => ({
     TextField: {
         color: "white",
         fontSize: "18px",
+        borderColor: 'white',
     },
+    underline: {
+        color: 'red' ,
+        '&::after': {
+          border: '2px solid red'
+        }
+      }
 
   }));
 
@@ -36,9 +43,7 @@ export default function Main(){
     const [boolean, setBoolean] = React.useState(true);
     const [inputValue, setInputValue] = React.useState("");
     const classes = useStyles();
-    const characters = ['我','的','你','是','了'];
-    const pinyin = ['wǒ','de','nǐ','shì','le'];
-    const pinyinWithoutTone = ['wo','de','ni','shi','le'];
+
     const [answer, setAnswer] = React.useState([]);
     const [openCorrect, setOpenCorrect] = React.useState(false);
     const [openWrong, setOpenWrong] = React.useState(false);
@@ -107,10 +112,10 @@ export default function Main(){
                 {chinese.chinese[selectedCharacter] ? chinese.chinese[selectedCharacter].character : ""}
             </h1>
             <form className={classes.root} noValidate autoComplete="off">
-                {boolean && <TextField value={inputValue} id="standard-basic"  onChange={handleChange} onKeyDown={handleKeyDown} label="" inputProps={{className: classes.TextField,min: 0, style: { textAlign: 'center' }}} />}
+                {boolean && <TextField value={inputValue} id="standard-basic" onChange={handleChange} onKeyDown={handleKeyDown} label="" inputProps={{ underline: classes.underline, className: classes.TextField, min: 0, style: { textAlign: 'center' }}} />}
             </form>
             <div className={classes.alertRoot}>
-                <Snackbar open={openCorrect} onClose={handleClose}>
+                <Snackbar anchorOrigin={{vertical:'center', horizontal:'center'}} open={openCorrect} onClose={handleClose}>
                     <Alert onClose={handleClose} severity="success">
                         Correct: {answer[2]} - {answer[0]}
                         <br/>
