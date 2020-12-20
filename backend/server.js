@@ -20,9 +20,11 @@ connection.once('open', () => {
 
 const exercisesRouter = require('./routes/exercises');
 const usersRouter = require('./routes/users');
+const chineseRouter = require('./routes/chinese');
 
 app.use('/exercises', exercisesRouter);
 app.use('/users', usersRouter);
+app.use('/chinese', chineseRouter)
 
 app.listen(port, () => { //starts server
     console.log(`Server is running on port: ${port}`);

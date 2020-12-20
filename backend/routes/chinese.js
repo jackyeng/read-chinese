@@ -3,19 +3,21 @@ let Chinese = require('../models/chinese.model');
 
 router.route('/').get((req, res) => { //first endpoint that handle incoming http get request on /users path
   Chinese.find()
-    .then(chineses => res.json(chineses))
+    .then(chinese => res.json(chinese))
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
 router.route('/add').post((req, res) => {
   const character = req.body.character;
   const pinyin = req.body.pinyin;
+  const pinyinWithoutTone = req.body.pinyinWithoutTone;
   const meaning = req.body.meaning;
   const rank = Number(req.body.rank);
 
   const newChinese = new Chinese({
     character,
     pinyin,
+    pinyinWithoutTone,
     meaning,
     rank,
   });
@@ -42,6 +44,7 @@ router.route('/update/:id').post((req, res) => {
     .then(chinese => {
       chinese.character = req.body.character;
       chinese.pinyin = req.body.pinyin;
+      chinese.pinyinWithoutTone = req.body.pinyinWithoutTone;
       chinese.meaning = req.body.meaning;
       chinese.rank = Number(req.body.rank);
 

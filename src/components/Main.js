@@ -1,9 +1,10 @@
 import React,{useEffect} from "react";
-import Button from '@material-ui/core/Button';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from '@material-ui/core/TextField';
+import axios from 'axios';
+import {chinese} from './chinesedata';
 
 function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -30,8 +31,6 @@ const useStyles = makeStyles((theme) => ({
 
   }));
 
-
-
 export default function Main(){
     const [selectedCharacter, setSelectedCharacter] = React.useState(0);
     const [boolean, setBoolean] = React.useState(true);
@@ -43,17 +42,18 @@ export default function Main(){
     const [answer, setAnswer] = React.useState([]);
     const [openCorrect, setOpenCorrect] = React.useState(false);
     const [openWrong, setOpenWrong] = React.useState(false);
-    const [list,setList] = React.useState({users:[]});
+    const [chinese, setChinese] = React.useState({chinese:[]});
     
     const handleClick = () => {
         handleClose();
-        if (inputValue === pinyinWithoutTone[selectedCharacter]){
+        if (inputValue === chinese.chinese[selectedCharacter].pinyinWithoutTone){
             setOpenCorrect(true);
         }
         else {
             setOpenWrong(true);
         }
     };
+
 
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
@@ -73,20 +73,38 @@ export default function Main(){
     const handleKeyDown = (e) => {
         if (e.keyCode === 13){
             e.preventDefault();
-
-            setAnswer([pinyin[selectedCharacter],inputValue]);
-            setSelectedCharacter((selectedCharacter + 1 < 5 ) ? selectedCharacter + 1 : 0);
+            const previousChinese = chinese.chinese[selectedCharacter];
+            setAnswer([previousChinese.pinyin, inputValue, previousChinese.character, previousChinese.meaning]);
+            setSelectedCharacter((selectedCharacter + 1 < chinese.chinese.length ) ? selectedCharacter + 1 : 0);
             handleClick();
 
             setInputValue("");
-            console.log(list);        }
+            console.log(chinese.chinese[selectedCharacter].character);
+         }
     };
 
+    React.useEffect(() =>{ 
+        axios.get('http://localhost:5000/chinese/')
+      .then(response => {
+        setChinese({ chinese: response.data })
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+        
+    }, []);
+    /*React.useEffect(() => { // post chinese characters to mongodb
+        var i;
+        for (i = 0; i < 100; i++){
+            axios.post('http://localhost:5000/chinese/add', chinese[i])
+        }   
+            
+      }, []);*/
    
     return(
         <div>
             <h1>
-                {characters[selectedCharacter]}
+                {chinese.chinese[selectedCharacter] ? chinese.chinese[selectedCharacter].character : ""}
             </h1>
             <form className={classes.root} noValidate autoComplete="off">
                 {boolean && <TextField value={inputValue} id="standard-basic"  onChange={handleChange} onKeyDown={handleKeyDown} label="" inputProps={{className: classes.TextField,min: 0, style: { textAlign: 'center' }}} />}
@@ -94,14 +112,19 @@ export default function Main(){
             <div className={classes.alertRoot}>
                 <Snackbar open={openCorrect} onClose={handleClose}>
                     <Alert onClose={handleClose} severity="success">
-                        Correct 
+                        Correct: {answer[2]} - {answer[0]}
+                        <br/>
+                        Meaning: {answer[3]}
+                        
                     </Alert>
                 </Snackbar>
                 <Snackbar open={openWrong} onClose={handleClose}>
                     <Alert onClose={handleClose} severity="error">
-                        Correct pinyin: {answer[0]} 
-                        <br/>
                         Your answer: {answer[1]}
+                        <br/>
+                        Correct answer: {answer[2]} - {answer[0]}
+                        <br/>
+                        Meaning: {answer[3]}
                     </Alert>
                 </Snackbar>
             </div>

@@ -1,0 +1,100 @@
+1	我	I ; me	wǒ
+2	的	possessive p.	de
+3	你	you	nǐ
+4	是	to be; is	shì
+5	了	completed action p.	le
+6	不	no; not	bù
+7	们	plural p.	men
+8	这	this	zhè
+9	一	one; a	yī
+10	他	he; him	tā
+11	么	interrogative p.	me
+12	在	at	zài
+13	有	to have; there is	yǒu
+14	个	general measure word	gè
+15	好	good; well	hǎo
+16	来	to come	lái
+17	人	man; person	rén
+18	那	that	nà
+19	要	to want; important	yào
+20	会	can; will; to know	huì
+21	就	then; just (emp.)	jiù
+22	什	what	shén
+23	没	not	méi
+24	到	to arrive; until (time)	dào
+25	说	to speak	shuō
+26	吗	question p.	ma
+27	为	because of; for	wèi
+28	想	to think; to want	xiǎng
+29	能	to be able to	néng
+30	上	above; top	shàng
+31	去	to go	qù
+32	道	way; method	dào
+33	她	she	tā
+34	很	very	hěn
+35	看	to see; to look at	kàn
+36	可	can; able to	kě
+37	知	to know	zhī
+38	得	complement p. (V + 得 + Adverb)	de
+39	过	experienced action p.	guo
+40	吧	…right?	ba
+41	还	still; yet; to return	hái
+42	对	correct; opposite	duì
+43	里	inside	lǐ
+44	以	according to; by	yǐ
+45	都	all; both	dōu
+46	事	thing; item	shì
+47	子	child	zǐ
+48	生	life; raw	shēng
+49	时	time	shí
+50	样	manner	yàng
+51	也	also; too	yě
+52	和	and	hé
+53	下	below; down	xià
+54	真	really; truly	zhēn
+55	现	present	xiàn
+56	做	to do	zuò
+57	大	big	dà
+58	啊	ah!	a
+59	怎	how	zěn
+60	出	to go out	chū
+61	点	a dot; o'clock	diǎn
+62	起	to rise	qǐ
+63	天	day; heaven	tiān
+64	把	direct object p.; to hold	bǎ
+65	开	to open; to start	kāi
+66	让	to allow; passive p.	ràng
+67	给	to give; for; passive p.	gěi
+68	但	but; yet	dàn
+69	谢	to thank	xiè
+70	着	action in progress p.	zhe
+71	只	only	zhǐ
+72	些	some; few	xiē
+73	如	as; as if	rú
+74	家	home; family	jiā
+75	后	behind; after	hòu 
+76	儿	son	ér
+77	多	many; much	duō
+78	意	idea; meaning	yì
+79	别	must not; other	bié
+80	所	actually; place	suǒ
+81	话	language; talk	huà
+82	小	small	xiǎo
+83	自	self	zì
+84	回	to answer; to return	huí
+85	然	correct	rán
+86	果	fruit	guǒ
+87	发	to send; to develop	fā
+88	见	to see; to meet	jiàn
+89	心	heart	xīn
+90	走	to walk; away	zǒu
+91	定	to set	dìng
+92	听	to listen	tīng
+93	觉	to feel	jué
+94	太	too (much)	tài
+95	该	should	gāi
+96	当	to be; just at	dāng
+97	经	pass through	jīng
+98	妈	mum	mā
+99	用	to use	yòng
+100	打	to hit	dǎ
