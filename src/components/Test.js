@@ -1,10 +1,11 @@
 import React,{useEffect} from "react";
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import TextField from '@material-ui/core/TextField';
 import axios from 'axios';
 import {chinese} from './chinesedata';
+import { green, red } from "@material-ui/core/colors";
 
 function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -37,6 +38,12 @@ const useStyles = makeStyles((theme) => ({
       }
 
   }));
+
+const theme = createMuiTheme({
+  palette: {
+    primary: red,
+  },
+});
 
 export default function Test(){
     const [selectedCharacter, setSelectedCharacter] = React.useState(0);
@@ -112,7 +119,9 @@ export default function Test(){
                 {chinese.chinese[selectedCharacter] ? chinese.chinese[selectedCharacter].character : ""}
             </h1>
             <form className={classes.root} noValidate autoComplete="off">
-                {boolean && <TextField value={inputValue} id="standard-basic" onChange={handleChange} onKeyDown={handleKeyDown} label="" inputProps={{ underline: classes.underline, className: classes.TextField, min: 0, style: { textAlign: 'center' }}} />}
+                <ThemeProvider theme={theme}>
+                  {boolean && <TextField value={inputValue} id="standard-basic" onChange={handleChange} onKeyDown={handleKeyDown} label="" inputProps={{ underline: classes.underline, className: classes.TextField, min: 0, style: { textAlign: 'center' }}} />}
+                </ThemeProvider>
             </form>
             <div className={classes.alertRoot}>
                 <Snackbar anchorOrigin={{vertical:'center', horizontal:'center'}} open={openCorrect} onClose={handleClose}>
