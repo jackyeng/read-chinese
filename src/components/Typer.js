@@ -49,44 +49,61 @@ export default function Test(){
     const [boolean, setBoolean] = React.useState(true);
     const [inputValue, setInputValue] = React.useState("");
     const [divList, setDivList] = React.useState([]);
+    const [selectList, setSelectList] = React.useState([]);
+    const [chinese, setChinese] = React.useState({chinese:[]});
+    const [result, setResult] = React.useState("");
     const classes = useStyles();
 
-    const [chinese, setChinese] = React.useState({chinese:[]});
-    
-    const handleClick = () => {
-        
-    };
 
     //Update value of input text field
     const handleChange = (e) => {
         e.preventDefault();
+    
         setInputValue(e.target.value);
         
     };
-  
+
+    function isNumber(n) { return !isNaN(parseFloat(n)) && !isNaN(n - 0) }
+
+    const handleResult = (e) => {
+        if (e < divList.length){
+            setResult(result + selectList[e]);
+            setInputValue("");
+        }
+
+    };
+
     //Handle users submit enter
     const handleKeyDown = (e) => {
-        if (e.keyCode === 13){
+        if (isNumber(String.fromCharCode(e.keyCode)) && divList.length>0){
+            handleResult(e.keyCode-48);
+        }
+        
+        if (e.keyCode === 13){  
             e.preventDefault();
-            const previousChinese = chinese.chinese[selectedCharacter];
            
             setSelectedCharacter((selectedCharacter + 1 < chinese.chinese.length ) ? selectedCharacter + 1 : 0);
-            handleClick();
 
             setInputValue("");
             setDivList([]);
-            console.log(chinese.chinese[selectedCharacter].character);
          }
     };
     
     useEffect(() => {
+        if (Number(inputValue)){
+            setInputValue("");
+        }
+        
         if (inputValue){
             const filtered = (chinese.chinese.filter(el => el.pinyinWithoutTone === inputValue));
-            const divList = []
+            const divList = [];
+            const selectList = [];
             for (var i = 0 ; i < filtered.length ; i++){
-                divList.push(<div>{(filtered[i].character + ": " + filtered[i].meaning)}</div>);
+                divList.push(<div>{String(i) + ") " + (filtered[i].character + ": " + filtered[i].meaning)}</div>);
+                selectList.push(filtered[i].character);
             }
             setDivList(divList);
+            setSelectList(selectList);
         }
         
       }, [inputValue]);
@@ -113,7 +130,9 @@ export default function Test(){
                   {boolean && <TextField value={inputValue} id="standard-basic" onChange={handleChange} onKeyDown={handleKeyDown} label="" inputProps={{ underline: classes.underline, className: classes.TextField, min: 0, style: { textAlign: 'center' }}} />}
                 </ThemeProvider>
             </form>
-            
+            <h1>
+                {result}
+            </h1>
         </div>
     );
 }
