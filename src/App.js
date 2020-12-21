@@ -9,6 +9,7 @@ import Characters from './components/Characters';
 import Typer from './components/Typer';
 import About from './components/About';
 
+
 function App() {
   return (
     <div className="App">

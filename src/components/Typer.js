@@ -1,14 +1,14 @@
 import React,{useEffect} from "react";
-import Snackbar from '@material-ui/core/Snackbar';
-import MuiAlert from '@material-ui/lab/Alert';
+import IconButton from '@material-ui/core/IconButton';
+import DeleteIcon from '@material-ui/icons/Delete';
 import { makeStyles, ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import TextField from '@material-ui/core/TextField';
 import axios from 'axios';
 import { red } from "@material-ui/core/colors";
-
-function Alert(props) {
-    return <MuiAlert elevation={6} variant="filled" {...props} />;
-  }
+import "./../index.css";
+import BackspaceIcon from '@material-ui/icons/Backspace';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -34,7 +34,23 @@ const useStyles = makeStyles((theme) => ({
         '&::after': {
           border: '2px solid red'
         }
-      }
+      },
+      root2: {
+        flexGrow: 1,
+        fontSize: 15,
+        justify: 'center',
+        
+      },
+      paper: {
+        padding: theme.spacing(1),
+        textAlign: 'center',
+        color: 'white',
+        backgroundColor: 'transparent',
+        justify: 'center',
+      },
+      control: {
+        padding: theme.spacing(2),
+      },
 
   }));
 
@@ -58,8 +74,10 @@ export default function Test(){
     //Update value of input text field
     const handleChange = (e) => {
         e.preventDefault();
-    
+        
         setInputValue(e.target.value);
+        
+        
         
     };
 
@@ -73,6 +91,13 @@ export default function Test(){
 
     };
 
+    const handleClear = () => {
+        setResult("");
+    }
+
+    const handleDelete = () => {
+        setResult(result.slice(0,-1));
+    }
     //Handle users submit enter
     const handleKeyDown = (e) => {
         if (isNumber(String.fromCharCode(e.keyCode)) && divList.length>0){
@@ -90,16 +115,17 @@ export default function Test(){
     };
     
     useEffect(() => {
-        if (Number(inputValue)){
+        if (Number(inputValue) || inputValue === '0'){
             setInputValue("");
         }
-        
+
         if (inputValue){
             const filtered = (chinese.chinese.filter(el => el.pinyinWithoutTone === inputValue));
             const divList = [];
             const selectList = [];
             for (var i = 0 ; i < filtered.length ; i++){
-                divList.push(<div>{String(i) + ") " + (filtered[i].character + ": " + filtered[i].meaning)}</div>);
+                divList.push(<div className="result">{String(i) + ") " + (filtered[i].character + ": " + filtered[i].meaning)}</div>);
+                
                 selectList.push(filtered[i].character);
             }
             setDivList(divList);
@@ -107,6 +133,30 @@ export default function Test(){
         }
         
       }, [inputValue]);
+
+      const [display, setDisplay] = React.useState([]);
+
+
+      const organiseDisplay = () => {
+        setDisplay([]);
+        if (divList.length > 0){
+            var display = [];
+            var temp = [...divList]
+            const result = new Array(Math.ceil(temp.length / 6))
+                        .fill()
+                        .map(_ => temp.splice(0, 6))
+                    
+            for ( var i = 0 ; i < Math.ceil(divList.length/6) ; i++){
+            display.push(
+               <Grid key={i} item>
+               <Paper className={classes.paper}>
+                 {result[i]}
+               </Paper>
+             </Grid>)
+            }
+           setDisplay(display);
+        }
+     }
 
     React.useEffect(() =>{ 
         axios.get('http://localhost:5000/chinese/')
@@ -119,17 +169,32 @@ export default function Test(){
         
     }, []);
    
+    React.useEffect(() =>{ 
+        organiseDisplay();
+    }, [divList]);
    
     return(
         <div>
-            <h1>
-                {divList}
-            </h1>
+            
+            <Grid container className={classes.root2} spacing={2}>
+                <Grid item xs={12}>
+                    <Grid container justify="center" spacing={2}>
+                        {display}    
+                    </Grid>
+                </Grid>
+            </Grid>
+            
             <form className={classes.root} noValidate autoComplete="off">
                 <ThemeProvider theme={theme}>
                   {boolean && <TextField value={inputValue} id="standard-basic" onChange={handleChange} onKeyDown={handleKeyDown} label="" inputProps={{ underline: classes.underline, className: classes.TextField, min: 0, style: { textAlign: 'center' }}} />}
                 </ThemeProvider>
             </form>
+            <IconButton onClick={()=>handleDelete()} >
+                    <BackspaceIcon />
+            </IconButton>
+            <IconButton onClick={()=>handleClear()} >
+                    <DeleteIcon />
+            </IconButton>
             <h1>
                 {result}
             </h1>
