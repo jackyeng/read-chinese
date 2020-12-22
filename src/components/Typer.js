@@ -27,7 +27,6 @@ const useStyles = makeStyles((theme) => ({
     TextField: {
         color: "white",
         fontSize: "18px",
-        borderColor: 'white',
     },
     underline: {
         color: 'red' ,
@@ -38,15 +37,16 @@ const useStyles = makeStyles((theme) => ({
       root2: {
         flexGrow: 1,
         fontSize: 15,
-        justify: 'center',
-        
+        marginTop: 40,
       },
       paper: {
         padding: theme.spacing(1),
         textAlign: 'center',
         color: 'white',
         backgroundColor: 'transparent',
+        boxShadow: 'none',  
         justify: 'center',
+        height: 194,
       },
       control: {
         padding: theme.spacing(2),
@@ -134,11 +134,11 @@ export default function Test(){
         
       }, [inputValue]);
 
-      const [display, setDisplay] = React.useState([]);
+      const [display, setDisplay] = React.useState(<Paper className={classes.paper}/>);
 
 
       const organiseDisplay = () => {
-        setDisplay([]);
+        setDisplay(<Paper className={classes.paper}/>);
         if (divList.length > 0){
             var display = [];
             var temp = [...divList]
@@ -148,11 +148,11 @@ export default function Test(){
                     
             for ( var i = 0 ; i < Math.ceil(divList.length/6) ; i++){
             display.push(
-               <Grid key={i} item>
-               <Paper className={classes.paper}>
-                 {result[i]}
-               </Paper>
-             </Grid>)
+               <Grid  key={i} item>
+                <Paper className={classes.paper}>
+                  {result[i]}
+                </Paper>
+              </Grid>)
             }
            setDisplay(display);
         }
@@ -195,9 +195,9 @@ export default function Test(){
             <IconButton onClick={()=>handleClear()} >
                     <DeleteIcon />
             </IconButton>
-            <h1>
+            <div className="result2">
                 {result}
-            </h1>
+            </div>
         </div>
     );
 }
