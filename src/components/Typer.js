@@ -124,7 +124,7 @@ export default function Test(){
             const divList = [];
             const selectList = [];
             for (var i = 0 ; i < filtered.length ; i++){
-                divList.push(<div className="result">{String(i) + ") " + (filtered[i].character + ": " + filtered[i].meaning)}</div>);
+                divList.push(<div className="result">{String(i) + " - " + (filtered[i].character + ": " + filtered[i].meaning)}</div>);
                 
                 selectList.push(filtered[i].character);
             }
