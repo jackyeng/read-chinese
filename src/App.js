@@ -1,13 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-import Test from './components/Test';
+import Test from './page/Test';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Practice from './components/Practice';
-import Characters from './components/Characters';
-import Typer from './components/Typer';
-import About from './components/About';
+import Navbar from './page/Navbar';
+import Practice from './page/Practice';
+import Characters from './page/Characters';
+import Typer from './page/Typer';
+import About from './page/About';
 
 
 function App() {

@@ -1,6 +1,7 @@
 
 // Requiring fs module in which 
 // readFile function is defined. 
+// https://gist.github.com/marcelo-ribeiro/abd651b889e4a20e0bab558a05d38d77
 const { clear } = require('console');
 const fs = require('fs') 
  

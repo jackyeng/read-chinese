@@ -1,11 +1,10 @@
-import React,{useEffect} from "react";
+import React from "react";
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import { makeStyles, ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import TextField from '@material-ui/core/TextField';
-import axios from 'axios';
-import {chinese} from './chinesedata';
-import { green, red } from "@material-ui/core/colors";
+
+import { red } from "@material-ui/core/colors";
 
 function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -39,13 +38,26 @@ const useStyles = makeStyles((theme) => ({
 
   }));
 
+/**
+ * Shuffles array in place. ES6 version
+ * @param {Array} a items An array containing the items.
+ */
+function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
+
 const theme = createMuiTheme({
   palette: {
     primary: red,
   },
 });
 
-export default function Test(){
+export default function TypeAssist(props){
+    const {practice} = props;
     const [selectedCharacter, setSelectedCharacter] = React.useState(0);
     const [boolean, setBoolean] = React.useState(true);
     const [inputValue, setInputValue] = React.useState("");
@@ -54,7 +66,7 @@ export default function Test(){
     const [answer, setAnswer] = React.useState([]);
     const [openCorrect, setOpenCorrect] = React.useState(false);
     const [openWrong, setOpenWrong] = React.useState(false);
-    const [chinese, setChinese] = React.useState({chinese:[]});
+    const [chinese, setChinese] = React.useState(practice);
     
     const handleClick = () => {
         handleClose();
@@ -91,20 +103,14 @@ export default function Test(){
             handleClick();
 
             setInputValue("");
-            console.log(chinese.chinese[selectedCharacter].character);
          }
     };
 
     React.useEffect(() =>{ 
-        axios.get('http://localhost:5000/chinese/')
-      .then(response => {
-        setChinese({ chinese: response.data })
-      })
-      .catch((error) => {
-        console.log(error);
-      })
+        const shuffled = shuffle(practice.chinese)
+        setChinese({chinese:shuffled});
         
-    }, []);
+    }, [practice]);
     /*React.useEffect(() => { // post chinese characters to mongodb
         var i;
         for (i = 0; i < 100; i++){
