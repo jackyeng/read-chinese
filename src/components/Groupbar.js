@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import ListSubheader from "@material-ui/core/ListSubheader";
 import List from "@material-ui/core/List";
 import GroupbarElement from "./GroupbarElement";
+import { borders } from '@material-ui/system';
+import './../index.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,8 +17,15 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(4),
   },
   title: {
-    color: "white",
-    fontFamily: "Noto Sans SC",
+    color: "#949494",
+    fontFamily: "Quicksand", // "Noto Sans SC",
+    fontSize: 16,
+    boxShadow: 10,
+    backgroundImage: 'url(./../fonts/logo.png',
+    borderColor: 'white',
+    border: 1,
+    
+    
   },
 }));
 
@@ -39,7 +48,7 @@ export default function Groupbar(props) {
       aria-labelledby="nested-list-subheader"
       subheader={
         <ListSubheader component="div" id="nested-list-subheader">
-          <div className={classes.title}>Practice Groups</div>
+          <div className={classes.title}>PRACTICE GROUPS</div>
         </ListSubheader>
       }
       className={classes.root}

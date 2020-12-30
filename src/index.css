@@ -12,7 +12,17 @@ code {
     monospace;
 }
 
+:root {
+  --lightgrey: #949494
+}
+
 .custom-link:hover {
+  color: #FF0000;
+  text-decoration: none !important;
+}
+
+.custom-link::after {
+  content: "";
   color: #FF0000;
   text-decoration: none !important;
 }
@@ -38,3 +48,4 @@ code {
   font-size: 33px;
   font-family: 'Noto Sans SC', sans-serif;
 }
+

@@ -17,7 +17,8 @@ const useStyles = makeStyles((theme) => ({
   },
   listItemText: {
     fontSize: 14,
-    fontFamily: "Noto Sans SC",
+    fontFamily: "Quicksand" ,//"Noto Sans SC",
+    color: "#949494",
   },
   highlightedText: {
     fontSize: 14,

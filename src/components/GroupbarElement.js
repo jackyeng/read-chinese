@@ -5,6 +5,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import ExpandLess from "@material-ui/icons/ExpandLess";
 import ExpandMore from "@material-ui/icons/ExpandMore";
 import SetElement from "./SetElement";
+import "./../index";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,12 +18,13 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(4),
   },
   listItemText: {
-    fontSize: 14,
-    fontFamily: "Noto Sans SC",
+    fontSize: 16,
+    fontFamily: "Quicksand" , //"Noto Sans SC",
+    color: "#949494",
   },
   highlightedText: {
-    fontSize: 14,
-    color: "red",
+    fontSize: 16,
+    color: "#fc3903",
   },
 }));
 
@@ -39,7 +41,7 @@ export default function GroupbarElement(props) {
           }}
           primary={"Group " + (index + 1).toString()}
         />
-        {open ? <ExpandLess style={{ fill: "red" }} /> : <ExpandMore />}
+        {open ? <ExpandLess style={{ fill: "#fc3903" }} /> : <ExpandMore style={{ fill: "#949494" }}/>} 
       </ListItem>
 
       {/*Set 1*/}

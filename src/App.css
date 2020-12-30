@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -14,6 +15,7 @@
 }
 
 .App-header {
+  
   background-color: #2e2d2d;
   min-height: 100vh;
   display: flex;
@@ -23,6 +25,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 
 .App-link {
   color: #61dafb;
@@ -37,6 +40,15 @@
 
 .App-page {
   margin-top: -100px;
+}
+
+.group-bar {
+  
+  color: white;
+  font-family: "Quicksand";
+  font-size: 30;
+  box-shadow: 10;
+  
 }
 
 @keyframes App-logo-spin {
