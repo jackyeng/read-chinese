@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
   listItemText: {
     fontSize: 14,
-    fontFamily: "Quicksand" ,//"Noto Sans SC",
+    fontFamily: "Quicksand", //"Noto Sans SC",
     color: "#949494",
   },
   highlightedText: {
@@ -27,11 +27,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SetElement(props) {
-  const { open, set, index, selectSet } = props;
+  const { openSet, handleOpenSet, open, page, set, index, selectSet } = props;
   const classes = useStyles();
 
   const handleSelect = () => {
-    selectSet(index, set);
+    selectSet(index + ( 5 * page ), set);
+
+    handleOpenSet(set);
   };
 
   return (
@@ -44,7 +46,11 @@ export default function SetElement(props) {
             className={classes.nested}
           >
             <ListItemText
-              classes={{ primary: classes.listItemText }}
+              classes={{
+                primary: openSet[set]
+                  ? classes.highlightedText
+                  : classes.listItemText,
+              }}
               primary={"Set " + (set + 1).toString()}
             />
           </ListItem>

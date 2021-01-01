@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
   listItemText: {
     fontSize: 16,
-    fontFamily: "Quicksand" , //"Noto Sans SC",
+    fontFamily: "Quicksand", //"Noto Sans SC",
     color: "#949494",
   },
   highlightedText: {
@@ -29,9 +29,22 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function GroupbarElement(props) {
-  const { open, handleClick, index, selectSet } = props;
+  const { open, page, handleClick, index, selectSet } = props;
+  const [openSet, setOpenSet] = React.useState([0, 0, 0, 0, 0]);
   const classes = useStyles();
-  
+
+  const handleOpenSet = (index) => {
+    const temp = new Array(5).fill(0);
+    temp[index] = 1;
+    setOpenSet(temp);
+  };
+
+  React.useEffect(() => {
+    if (!open) {
+        setOpenSet([0, 0, 0, 0, 0]);
+    }
+  }, [open]);
+
   return (
     <div>
       <ListItem button onClick={() => handleClick(index)}>
@@ -39,25 +52,69 @@ export default function GroupbarElement(props) {
           classes={{
             primary: open ? classes.highlightedText : classes.listItemText,
           }}
-          primary={"Group " + (index + 1).toString()}
+          primary={"Group " + ( ( index + 1 ) + ( 5 * page) ).toString()}
         />
-        {open ? <ExpandLess style={{ fill: "#fc3903" }} /> : <ExpandMore style={{ fill: "#949494" }}/>} 
+        {open ? (
+          <ExpandLess style={{ fill: "#fc3903" }} />
+        ) : (
+          <ExpandMore style={{ fill: "#949494" }} />
+        )}
       </ListItem>
 
       {/*Set 1*/}
-      <SetElement open={open} set={0} index={index} selectSet={selectSet} />
+      <SetElement
+        open={open}
+        page={page}
+        openSet={openSet}
+        handleOpenSet={handleOpenSet}
+        set={0}
+        index={index}
+        selectSet={selectSet}
+      />
 
       {/*Set 2*/}
-      <SetElement open={open} set={1} index={index} selectSet={selectSet} />
+      <SetElement
+        open={open}
+        page={page}
+        openSet={openSet}
+        handleOpenSet={handleOpenSet}
+        set={1}
+        index={index}
+        selectSet={selectSet}
+      />
 
       {/*Set 3*/}
-      <SetElement open={open} set={2} index={index} selectSet={selectSet} />
+      <SetElement
+        open={open}
+        page={page}
+        openSet={openSet}
+        handleOpenSet={handleOpenSet}
+        set={2}
+        index={index}
+        selectSet={selectSet}
+      />
 
       {/*Set 4*/}
-      <SetElement open={open} set={3} index={index} selectSet={selectSet} />
+      <SetElement
+        open={open}
+        page={page}
+        openSet={openSet}
+        handleOpenSet={handleOpenSet}
+        set={3}
+        index={index}
+        selectSet={selectSet}
+      />
 
       {/*Set 5*/}
-      <SetElement open={open} set={4} index={index} selectSet={selectSet} />
+      <SetElement
+        open={open}
+        page={page}
+        openSet={openSet}
+        handleOpenSet={handleOpenSet}
+        set={4}
+        index={index}
+        selectSet={selectSet}
+      />
     </div>
   );
 }

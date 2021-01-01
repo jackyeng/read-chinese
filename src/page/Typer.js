@@ -189,10 +189,10 @@ export default function Test(){
                   {boolean && <TextField value={inputValue} id="standard-basic" onChange={handleChange} onKeyDown={handleKeyDown} label="" inputProps={{ underline: classes.underline, className: classes.TextField, min: 0, style: { textAlign: 'center' }}} />}
                 </ThemeProvider>
             </form>
-            <IconButton onClick={()=>handleDelete()} >
+            <IconButton className="no-frame" onClick={()=>handleDelete()} >
                     <BackspaceIcon />
             </IconButton>
-            <IconButton onClick={()=>handleClear()} >
+            <IconButton className="no-frame" onClick={()=>handleClear()} >
                     <DeleteIcon />
             </IconButton>
             <div className="result2">
