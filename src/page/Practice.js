@@ -4,17 +4,16 @@ import axios from "axios";
 import Grid from "@material-ui/core/Grid";
 import Groupbar from "../components/Groupbar";
 import TypeAssist from "../components/TypeAssist";
-
-import Backdrop from '@material-ui/core/Backdrop';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import Button from '@material-ui/core/Button';
+import Backdrop from "@material-ui/core/Backdrop";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import Button from "@material-ui/core/Button";
+import ReferenceTable from "./../components/ReferenceTable";
 
 const useStyles = makeStyles((theme) => ({
   backdrop: {
     zIndex: theme.zIndex.drawer + 1,
     color: "fff",
-    backgroundColor: 'rgba(0, 0, 0, 0.8)',
-
+    backgroundColor: "rgba(0, 0, 0, 0.8)",
   },
   groupBar: {
     flexDirection: "column",
@@ -52,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     fontSize: 11,
-    color: '#949494',
+    color: "#949494",
     borderColor: "#e33a07",
     "&:hover": {
       borderColor: "#949494",
@@ -61,6 +60,11 @@ const useStyles = makeStyles((theme) => ({
     "&::after": {
       borderColor: "#e33a07",
     },
+  },
+  instruction: {
+    marginTop: -100,
+    color: "#949494",
+
   }
 }));
 
@@ -71,7 +75,6 @@ export default function Practice() {
   const [displayGroup, setDisplayGroup] = React.useState([]);
   const [interactGroup, setInteractGroup] = React.useState([]);
   const [characterDisplay, setCharacterDisplay] = React.useState([]);
-
   const [open, setOpen] = React.useState(false);
   const handleClose = () => {
     setOpen(false);
@@ -80,9 +83,7 @@ export default function Practice() {
     setOpen(!open);
   };
 
-
   const GroupCharacters = (chinese) => {
-
     const result = new Array(Math.ceil(chinese[0].length / 50))
       .fill()
       .map((_) => chinese[0].splice(0, 50));
@@ -93,7 +94,6 @@ export default function Practice() {
         .map((_) => result[index].splice(0, 10))
     );
     setChineseGroup(groupResult);
-   
   };
 
   const selectSet = (group = 0, set = 0) => {
@@ -103,7 +103,7 @@ export default function Practice() {
     }
     setDisplayGroup(temp);
     setInteractGroup(chineseGroup[group][set]);
-    
+
     handleDisplay(group, set);
   };
 
@@ -111,9 +111,15 @@ export default function Practice() {
     const temp = [];
     const chinese = chineseGroup[group][set];
     for (var i = 0; i < chineseGroup[group][set].length; i++) {
-      temp.push(chinese[i].character + "  /  " + chinese[i].pinyin + "  /  " + chinese[i].meaning );
+      temp.push(
+        chinese[i].character +
+          "  /  " +
+          chinese[i].pinyin +
+          "  /  " +
+          chinese[i].meaning
+      );
 
-      temp.push(<br/>);
+      temp.push(<br />);
     }
     setCharacterDisplay(temp);
   };
@@ -134,24 +140,39 @@ export default function Practice() {
       GroupCharacters(chinese);
     }
   }, [chinese]);
+
   return (
     <div>
       <Grid container className={classes.groupBar} spacing={2}>
         <Grid container className={classes.sideBar} spacing={2}>
-          <Groupbar selectSet={selectSet} />
+          <Groupbar selectSet={selectSet} setDisplayGroup={setDisplayGroup}/>
         </Grid>
         <Grid container className={classes.Practice} spacing={2}>
-          {displayGroup.length !== 0 && <div className={classes.displaySize}>
-            {displayGroup} <br/>
-            <Button className={classes.button} variant="outlined" color="primary" onClick={handleToggle}>
-              Show pinyin/meaning
-            </Button>
-            <Backdrop className={classes.backdrop} open={open} onClick={handleClose}>
-              {characterDisplay}
-            </Backdrop>
-            <br/>
-          </div>}
-          <TypeAssist practice={{ chinese: interactGroup }} />
+          {displayGroup.length === 0 && 
+          <div className={classes.instruction}> Select a group and set to start practicing </div>}
+          {displayGroup.length !== 0 && (
+            <div className={classes.displaySize}>
+              {displayGroup} <br />
+              <Button
+                className={classes.button}
+                variant="outlined"
+                color="primary"
+                onClick={handleToggle}
+              >
+                Show pinyin/meaning
+              </Button>
+              <Backdrop
+                className={classes.backdrop}
+                open={open}
+                onClick={handleClose}
+              >
+                <ReferenceTable chinese={interactGroup}/>
+                {/*characterDisplay*/}
+              </Backdrop>
+              <br />
+            </div>
+          )}
+          {displayGroup.length !== 0 && <TypeAssist practice={{ chinese: interactGroup }} />}
         </Grid>
       </Grid>
     </div>
