@@ -8,7 +8,7 @@ import logo from "./../fonts/logo.png";
 export default function ActiveLastBreadcrumb() {
   return (
     <Breadcrumbs separator="" aria-label="breadcrumb">
-      <Link className="custom-link" color="white" href="/">
+      <Link className="custom-links" color="white" href="/">
         <img className="home-logo" src={logo} alt=""></img>
       </Link>
       <Link className="custom-link" color="white" href="/practice">

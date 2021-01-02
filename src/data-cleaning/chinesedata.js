@@ -594,8 +594,8 @@ export const chinese = [
       ,
       {
         character: '后',
-        pinyin: 'hòu ',
-        pinyinWithoutTone: 'hou ',
+        pinyin: 'hòu',
+        pinyinWithoutTone: 'hou',
         meaning: 'behind; after',
         rank: '75'
       }
@@ -2023,8 +2023,8 @@ export const chinese = [
 ,
 {
   character: '希',
-  pinyin: 'xī ',
-  pinyinWithoutTone: 'xi ',
+  pinyin: 'xī',
+  pinyinWithoutTone: 'xi',
   meaning: 'rare: hope',
   rank: '254'
 }

@@ -58,10 +58,13 @@ const theme = createMuiTheme({
   },
 });
 
+/**
+ * Component which displays a chinese character and a TextField component for users to input the answer
+ * @param {array} props.practice       array containing the selected group and set of character for practice
+ */
 export default function TypeAssist(props) {
   const { practice } = props;
   const [selectedCharacter, setSelectedCharacter] = React.useState(0);
-  const [boolean, setBoolean] = React.useState(true);
   const [inputValue, setInputValue] = React.useState("");
   const classes = useStyles();
 
@@ -70,9 +73,13 @@ export default function TypeAssist(props) {
   const [openWrong, setOpenWrong] = React.useState(false);
   const [chinese, setChinese] = React.useState(practice);
 
+  console.log(practice);
+  //Check user's input answer and display feedback according to result
   const handleClick = () => {
     handleClose();
-    if (inputValue === chinese.chinese[selectedCharacter].pinyinWithoutTone.trim()) {
+    if (
+      inputValue === chinese.chinese[selectedCharacter].pinyinWithoutTone.trim()
+    ) {
       setOpenCorrect(true);
     } else {
       setOpenWrong(true);
@@ -93,7 +100,7 @@ export default function TypeAssist(props) {
     setInputValue(e.target.value);
   };
 
-  //Handle users submit enter
+  //Save attempt information to be displayed as feedback when user submits answer
   const handleKeyDown = (e) => {
     if (e.keyCode === 13) {
       e.preventDefault();
@@ -119,40 +126,35 @@ export default function TypeAssist(props) {
     const shuffled = shuffle(practice.chinese);
     setChinese({ chinese: shuffled });
   }, [practice]);
-  /*React.useEffect(() => { // post chinese characters to mongodb
-        var i;
-        for (i = 0; i < 100; i++){
-            axios.post('http://localhost:5000/chinese/add', chinese[i])
-        }   
-            
-      }, []);*/
 
   return (
     <div>
+      {/*Chinese character display */}
       <h1>
         {chinese.chinese[selectedCharacter]
           ? chinese.chinese[selectedCharacter].character
           : ""}
       </h1>
+      {/*Textfield for user input */}
       <form className={classes.root} noValidate autoComplete="off">
         <ThemeProvider theme={theme}>
-          {boolean && (
-            <TextField
-              value={inputValue}
-              id="standard-basic"
-              onChange={handleChange}
-              onKeyDown={handleKeyDown}
-              label=""
-              inputProps={{
-                underline: classes.underline,
-                className: classes.TextField,
-                min: 0,
-                style: { textAlign: "center" },
-              }}
-            />
-          )}
+          <TextField
+            value={inputValue}
+            id="standard-basic"
+            onChange={handleChange}
+            onKeyDown={handleKeyDown}
+            label=""
+            inputProps={{
+              underline: classes.underline,
+              className: classes.TextField,
+              min: 0,
+              style: { textAlign: "center" },
+            }}
+          />
         </ThemeProvider>
       </form>
+
+      {/*Answer feedback */}
       <div className={classes.alertRoot}>
         <Snackbar
           anchorOrigin={{ vertical: "center", horizontal: "center" }}

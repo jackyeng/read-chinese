@@ -64,18 +64,23 @@ const useStyles = makeStyles((theme) => ({
   instruction: {
     marginTop: -100,
     color: "#949494",
-
-  }
+  },
+  progressBar: {
+    marginLeft: 60,
+    marginTop: 120,
+    color: "red",
+  },
 }));
 
 export default function Practice() {
   const classes = useStyles();
   const [chinese, setChinese] = React.useState({ chinese: [] });
-  const [chineseGroup, setChineseGroup] = React.useState([[]]);
+  const [chineseGroup, setChineseGroup] = React.useState([]);
   const [displayGroup, setDisplayGroup] = React.useState([]);
   const [interactGroup, setInteractGroup] = React.useState([]);
-  const [characterDisplay, setCharacterDisplay] = React.useState([]);
+
   const [open, setOpen] = React.useState(false);
+
   const handleClose = () => {
     setOpen(false);
   };
@@ -83,11 +88,18 @@ export default function Practice() {
     setOpen(!open);
   };
 
+  /**
+   * Group Chinese characters called from database into appropriate structure for the web app
+   * @param {array} chinese   array containing all Chinese characters called from database
+   */
   const GroupCharacters = (chinese) => {
+
+    //Splice array into "Group" of arrays of 50 Chinese characters
     const result = new Array(Math.ceil(chinese[0].length / 50))
       .fill()
       .map((_) => chinese[0].splice(0, 50));
 
+    //Splice each of the "Group" into further 5 "Set" of arrays of 10 Chinese characters
     const groupResult = result.map((_, index) =>
       new Array(Math.ceil(result[index].length / 10))
         .fill()
@@ -96,34 +108,23 @@ export default function Practice() {
     setChineseGroup(groupResult);
   };
 
+  /**
+   * Display and load the selected "Set" of Chinese characters for user to practice
+   * @param {number} group   selected "Group" 
+   * @param {number} set     selected "Set"
+   */
   const selectSet = (group = 0, set = 0) => {
-    const temp = [];
-    for (var i = 0; i < chineseGroup[group][set].length; i++) {
-      temp.push(chineseGroup[group][set][i].character + " ");
+    if (chineseGroup.length !== 0) {
+      const temp = [];
+      for (var i = 0; i < chineseGroup[group][set].length; i++) {
+        temp.push(chineseGroup[group][set][i].character + " ");
+      }
+      setDisplayGroup(temp);
+      setInteractGroup(chineseGroup[group][set]);
     }
-    setDisplayGroup(temp);
-    setInteractGroup(chineseGroup[group][set]);
-
-    handleDisplay(group, set);
   };
 
-  const handleDisplay = (group, set) => {
-    const temp = [];
-    const chinese = chineseGroup[group][set];
-    for (var i = 0; i < chineseGroup[group][set].length; i++) {
-      temp.push(
-        chinese[i].character +
-          "  /  " +
-          chinese[i].pinyin +
-          "  /  " +
-          chinese[i].meaning
-      );
-
-      temp.push(<br />);
-    }
-    setCharacterDisplay(temp);
-  };
-
+  //Calls Chinese characters from database
   React.useEffect(() => {
     axios
       .get("http://localhost:5000/chinese/")
@@ -145,11 +146,19 @@ export default function Practice() {
     <div>
       <Grid container className={classes.groupBar} spacing={2}>
         <Grid container className={classes.sideBar} spacing={2}>
-          <Groupbar selectSet={selectSet} setDisplayGroup={setDisplayGroup}/>
+          {chineseGroup.length !== 0 ? (
+            <Groupbar selectSet={selectSet} setDisplayGroup={setDisplayGroup} />
+          ) : (
+            <CircularProgress className={classes.progressBar} />
+          )}
         </Grid>
         <Grid container className={classes.Practice} spacing={2}>
-          {displayGroup.length === 0 && 
-          <div className={classes.instruction}> Select a group and set to start practicing </div>}
+          {displayGroup.length === 0 && (
+            <div className={classes.instruction}>
+              {" "}
+              Select a group and set to start practicing{" "}
+            </div>
+          )}
           {displayGroup.length !== 0 && (
             <div className={classes.displaySize}>
               {displayGroup} <br />
@@ -166,13 +175,14 @@ export default function Practice() {
                 open={open}
                 onClick={handleClose}
               >
-                <ReferenceTable chinese={interactGroup}/>
-                {/*characterDisplay*/}
+                <ReferenceTable chinese={interactGroup} />
               </Backdrop>
               <br />
             </div>
           )}
-          {displayGroup.length !== 0 && <TypeAssist practice={{ chinese: interactGroup }} />}
+          {displayGroup.length !== 0 && (
+            <TypeAssist practice={{ chinese: interactGroup }} />
+          )}
         </Grid>
       </Grid>
     </div>

@@ -28,20 +28,30 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+/**
+ * Selection Box Component which allow users to select different groups and sets for practice
+ * @param {func} props.handleClick       handles group selection
+ * @param {func} props.selectSet         handles set selection
+ * @param {number} props.open            opened group
+ * @param {number} props.page            current page
+ * @param {number} props.index           group number
+ */
 export default function GroupbarElement(props) {
-  const { open, page, handleClick, index, selectSet } = props;
-  const [openSet, setOpenSet] = React.useState([0, 0, 0, 0, 0]);
+  const { handleClick, selectSet, open, page, index } = props;
+  const [openSet, setOpenSet] = React.useState(new Array(5).fill(0));
   const classes = useStyles();
 
+  //Open selected group and display the sets under it for practice selection
   const handleOpenSet = (index) => {
     const temp = new Array(5).fill(0);
     temp[index] = 1;
     setOpenSet(temp);
   };
 
+  //Close sets under the selected group when it closes
   React.useEffect(() => {
     if (!open) {
-        setOpenSet([0, 0, 0, 0, 0]);
+      setOpenSet(new Array(5).fill(0));
     }
   }, [open]);
 
@@ -52,7 +62,7 @@ export default function GroupbarElement(props) {
           classes={{
             primary: open ? classes.highlightedText : classes.listItemText,
           }}
-          primary={"Group " + ( ( index + 1 ) + ( 5 * page) ).toString()}
+          primary={"Group " + (index + 1 + 5 * page).toString()} //groups displayed corresponds to page number
         />
         {open ? (
           <ExpandLess style={{ fill: "#fc3903" }} />
@@ -61,60 +71,17 @@ export default function GroupbarElement(props) {
         )}
       </ListItem>
 
-      {/*Set 1*/}
-      <SetElement
-        open={open}
-        page={page}
-        openSet={openSet}
-        handleOpenSet={handleOpenSet}
-        set={0}
-        index={index}
-        selectSet={selectSet}
-      />
-
-      {/*Set 2*/}
-      <SetElement
-        open={open}
-        page={page}
-        openSet={openSet}
-        handleOpenSet={handleOpenSet}
-        set={1}
-        index={index}
-        selectSet={selectSet}
-      />
-
-      {/*Set 3*/}
-      <SetElement
-        open={open}
-        page={page}
-        openSet={openSet}
-        handleOpenSet={handleOpenSet}
-        set={2}
-        index={index}
-        selectSet={selectSet}
-      />
-
-      {/*Set 4*/}
-      <SetElement
-        open={open}
-        page={page}
-        openSet={openSet}
-        handleOpenSet={handleOpenSet}
-        set={3}
-        index={index}
-        selectSet={selectSet}
-      />
-
-      {/*Set 5*/}
-      <SetElement
-        open={open}
-        page={page}
-        openSet={openSet}
-        handleOpenSet={handleOpenSet}
-        set={4}
-        index={index}
-        selectSet={selectSet}
-      />
+      {openSet.map((_, set) => (
+        <SetElement
+          open={open}
+          page={page}
+          openSet={openSet}
+          handleOpenSet={handleOpenSet}
+          set={set}
+          group={index}
+          selectSet={selectSet}
+        />
+      ))}
     </div>
   );
 }

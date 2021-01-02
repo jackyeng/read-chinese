@@ -56,3 +56,12 @@ fs.writeFile('CharacterObjects.txt', characterObjects, (err) => {
     // In case of a error throw err. 
     if (err) throw err; 
 }) 
+
+/*Posting*/
+/*React.useEffect(() => { // post chinese characters to mongodb
+        var i;
+        for (i = 0; i < 100; i++){
+            axios.post('http://localhost:5000/chinese/add', chinese[i])
+        }   
+            
+      }, []);*/
