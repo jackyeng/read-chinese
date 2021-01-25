@@ -7,9 +7,13 @@ import Practice from './page/Practice';
 import Characters from './page/Characters';
 import Typer from './page/Typer';
 import About from './page/About';
+import React from 'react';
+import axios from 'axios';
+
 
 
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">

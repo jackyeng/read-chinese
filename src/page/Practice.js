@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     height: 500,
     backgroundColor: "transparent",
   },
-  Practice: {
+  practice: {
     justifyContent: "center",
     alignItems: "center",
     marginLeft: -180,
@@ -152,7 +152,7 @@ export default function Practice() {
             <CircularProgress className={classes.progressBar} />
           )}
         </Grid>
-        <Grid container className={classes.Practice} spacing={2}>
+        <Grid container className={classes.practice} spacing={2}>
           {displayGroup.length === 0 && (
             <div className={classes.instruction}>
               {" "}
@@ -181,7 +181,7 @@ export default function Practice() {
             </div>
           )}
           {displayGroup.length !== 0 && (
-            <TypeAssist practice={{ chinese: interactGroup }} />
+            <TypeAssist practice={{ chinese: interactGroup }} feedback={open}/>
           )}
         </Grid>
       </Grid>

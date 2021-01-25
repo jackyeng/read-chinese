@@ -36,8 +36,8 @@ const useStyles = makeStyles((theme) => ({
 
 /**
  * Selection Box Component which allow users to select different groups and sets for practice
- * @param {func} props.selectSet           props object with key value {temperature},{humidity},{windspeed},{bushfireratings},{bushfirezone}
- * @param {func} props.setDisplayGroup     boolean which represents whether temperature is active on chart
+ * @param {func} props.selectSet           .
+ * @param {func} props.setDisplayGroup     .
  */
 export default function Groupbar(props) {
   const classes = useStyles();

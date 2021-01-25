@@ -63,7 +63,7 @@ const theme = createMuiTheme({
  * @param {array} props.practice       array containing the selected group and set of character for practice
  */
 export default function TypeAssist(props) {
-  const { practice } = props;
+  const { practice, feedback } = props;
   const [selectedCharacter, setSelectedCharacter] = React.useState(0);
   const [inputValue, setInputValue] = React.useState("");
   const classes = useStyles();
@@ -73,7 +73,6 @@ export default function TypeAssist(props) {
   const [openWrong, setOpenWrong] = React.useState(false);
   const [chinese, setChinese] = React.useState(practice);
 
-  console.log(practice);
   //Check user's input answer and display feedback according to result
   const handleClick = () => {
     handleClose();
@@ -155,6 +154,7 @@ export default function TypeAssist(props) {
       </form>
 
       {/*Answer feedback */}
+      {!feedback &&
       <div className={classes.alertRoot}>
         <Snackbar
           anchorOrigin={{ vertical: "center", horizontal: "center" }}
@@ -180,7 +180,7 @@ export default function TypeAssist(props) {
             Meaning: {answer[3]}
           </Alert>
         </Snackbar>
-      </div>
+      </div>}
     </div>
   );
 }
