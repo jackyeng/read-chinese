@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
   titleColor: {
     fontSize: "20px",
     color: "#949494",
-    fontFamily: "Noto Sans SC",
+    fontFamily: "Quicksand",
   },
 }));
 

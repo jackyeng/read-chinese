@@ -64,6 +64,7 @@ const useStyles = makeStyles((theme) => ({
   instruction: {
     marginTop: -100,
     color: "#949494",
+    fontFamily:"Quicksand",
   },
   progressBar: {
     marginLeft: 60,
@@ -78,6 +79,7 @@ export default function Practice() {
   const [chineseGroup, setChineseGroup] = React.useState([]);
   const [displayGroup, setDisplayGroup] = React.useState([]);
   const [interactGroup, setInteractGroup] = React.useState([]);
+  const [referenceGroup, setReferenceGroup] = React.useState([]);
 
   const [open, setOpen] = React.useState(false);
 
@@ -120,7 +122,8 @@ export default function Practice() {
         temp.push(chineseGroup[group][set][i].character + " ");
       }
       setDisplayGroup(temp);
-      setInteractGroup(chineseGroup[group][set]);
+      setReferenceGroup(chineseGroup[group][set]);
+      setInteractGroup(JSON.parse(JSON.stringify(chineseGroup[group][set])));
     }
   };
 
@@ -175,7 +178,7 @@ export default function Practice() {
                 open={open}
                 onClick={handleClose}
               >
-                <ReferenceTable chinese={interactGroup} />
+                <ReferenceTable chinese={referenceGroup} />
               </Backdrop>
               <br />
             </div>
