@@ -7,7 +7,7 @@ export default function About(){
         <div className="about">
             <b className="redtitle">Welcome to Read Chinese!</b> 
             <br/>
-            Created to assist people who's fluent but illiterate in Chinese.
+            Created to assist people who are fluent(less effective for non-fluent) but illiterate in Chinese.
             <br/> <br/> 
             <b className="redtitle">It includes the following 2 main sections:-</b>
             <br/>
