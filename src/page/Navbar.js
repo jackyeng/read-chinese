@@ -14,9 +14,6 @@ export default function ActiveLastBreadcrumb() {
       <Link className="custom-link" color="white" href="/practice">
         practice
       </Link>
-      <Link className="custom-link" color="white" href="/test">
-        test
-      </Link>
       <Link className="custom-link" color="white" href="/typer">
         typer
       </Link>
@@ -24,7 +21,9 @@ export default function ActiveLastBreadcrumb() {
         characters
       </Link>
       <Link className="custom-link" color="white" href="/about">
-        about
+        about           
+      </Link>
+      <Link className="custom-link" color="white" >
       </Link>
     </Breadcrumbs>
   );

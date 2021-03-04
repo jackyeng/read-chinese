@@ -8,6 +8,7 @@ import Backdrop from "@material-ui/core/Backdrop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Button from "@material-ui/core/Button";
 import ReferenceTable from "./../components/ReferenceTable";
+import {chineseData} from "./../data/chinesedata";
 
 const useStyles = makeStyles((theme) => ({
   backdrop: {
@@ -95,7 +96,6 @@ export default function Practice() {
    * @param {array} chinese   array containing all Chinese characters called from database
    */
   const GroupCharacters = (chinese) => {
-
     //Splice array into "Group" of arrays of 50 Chinese characters
     const result = new Array(Math.ceil(chinese[0].length / 50))
       .fill()
@@ -129,19 +129,21 @@ export default function Practice() {
 
   //Calls Chinese characters from database
   React.useEffect(() => {
-    axios
+    /*axios
       .get("http://localhost:5000/chinese/")
       .then((response) => {
         setChinese([response.data]);
       })
       .catch((error) => {
         console.log(error);
-      });
+      });*/
+      setChinese([chineseData]);
   }, []);
 
   React.useEffect(() => {
     if (chinese.length) {
       GroupCharacters(chinese);
+      console.log(chinese);
     }
   }, [chinese]);
 

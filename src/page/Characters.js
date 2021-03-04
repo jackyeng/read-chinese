@@ -8,6 +8,7 @@ import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import clsx from "clsx";
+import {chineseData} from "./../data/chinesedata";
 
 const useStyles = makeStyles((theme) => ({
   transparent: {
@@ -80,9 +81,7 @@ export default function Characters() {
 
   /*calls Chinese characters from database*/
   React.useEffect(() => {
-    chineseAPI().then((chinese) => {
-      setTooltip(chinese.data);
-    });
+    setTooltip(chineseData);
   }, []);
 
   React.useEffect(() => {

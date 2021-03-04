@@ -1,5 +1,4 @@
-
-export const chinese = [
+export const chineseData = [
       {
         character: '我',
         pinyin: 'wǒ',
@@ -834,7 +833,7 @@ export const chinese = [
       {
         character: '女',
         pinyin: 'nǚ',
-        pinyinWithoutTone: 'nǚ',
+        pinyinWithoutTone: 'nu',
         meaning: 'female',
         rank: '105'
       }
@@ -2127,8 +2126,8 @@ export const chinese = [
 ,
 {
   character: '噢',
-  pinyin: 'ō ',
-  pinyinWithoutTone: 'o ',
+  pinyin: 'ō',
+  pinyinWithoutTone: 'o',
   meaning: 'moan sound',
   rank: '267'
 }
@@ -2399,8 +2398,8 @@ export const chinese = [
 ,
 {
   character: '嗨',
-  pinyin: 'hāi ',
-  pinyinWithoutTone: 'hai ',
+  pinyin: 'hāi',
+  pinyinWithoutTone: 'hai',
   meaning: 'an exclamation',
   rank: '301'
 }
@@ -2583,8 +2582,8 @@ export const chinese = [
 ,
 {
   character: '呃',
-  pinyin: 'è ',
-  pinyinWithoutTone: 'e ',
+  pinyin: 'è',
+  pinyinWithoutTone: 'e',
   meaning: 'belch; hiccup',
   rank: '324'
 }
@@ -4287,8 +4286,8 @@ export const chinese = [
 ,
 {
   character: '糟',
-  pinyin: 'zāo ',
-  pinyinWithoutTone: 'zao ',
+  pinyin: 'zāo',
+  pinyinWithoutTone: 'zao',
   meaning: 'dregs',
   rank: '537'
 }
@@ -4815,8 +4814,8 @@ export const chinese = [
 ,
 {
   character: '迪',
-  pinyin: 'dí ',
-  pinyinWithoutTone: 'di ',
+  pinyin: 'dí',
+  pinyinWithoutTone: 'di',
   meaning: 'to enlighten',
   rank: '603'
 }
@@ -5151,8 +5150,8 @@ export const chinese = [
 ,
 {
   character: '姆',
-  pinyin: 'mǔ ',
-  pinyinWithoutTone: 'mu ',
+  pinyin: 'mǔ',
+  pinyinWithoutTone: 'mu',
   meaning: 'matron',
   rank: '645'
 }
@@ -5703,8 +5702,8 @@ export const chinese = [
 ,
 {
   character: '狱',
-  pinyin: 'yù ',
-  pinyinWithoutTone: 'yu ',
+  pinyin: 'yù',
+  pinyinWithoutTone: 'yu',
   meaning: 'prison; lawsuit',
   rank: '714'
 }
@@ -5831,8 +5830,8 @@ export const chinese = [
 ,
 {
   character: '谎',
-  pinyin: 'huǎng ',
-  pinyinWithoutTone: 'huang ',
+  pinyin: 'huǎng',
+  pinyinWithoutTone: 'huang',
   meaning: 'lie',
   rank: '730'
 }
@@ -5919,8 +5918,8 @@ export const chinese = [
 ,
 {
   character: '挺',
-  pinyin: 'tǐng ',
-  pinyinWithoutTone: 'ting ',
+  pinyin: 'tǐng',
+  pinyinWithoutTone: 'ting',
   meaning: 'to stand upright',
   rank: '741'
 }
@@ -6007,8 +6006,8 @@ export const chinese = [
 ,
 {
   character: '资',
-  pinyin: 'zī ',
-  pinyinWithoutTone: 'zi ',
+  pinyin: 'zī',
+  pinyinWithoutTone: 'zi',
   meaning: 'property; wealth',
   rank: '752'
 }
@@ -6023,8 +6022,8 @@ export const chinese = [
 ,
 {
   character: '踪',
-  pinyin: 'zōng ',
-  pinyinWithoutTone: 'zong ',
+  pinyin: 'zōng',
+  pinyinWithoutTone: 'zong',
   meaning: 'footprints; traces',
   rank: '754'
 }
@@ -6071,8 +6070,8 @@ export const chinese = [
 ,
 {
   character: '瞧',
-  pinyin: 'qiáo ',
-  pinyinWithoutTone: 'qiao ',
+  pinyin: 'qiáo',
+  pinyinWithoutTone: 'qiao',
   meaning: 'to glance at',
   rank: '760'
 }
@@ -6087,8 +6086,8 @@ export const chinese = [
 ,
 {
   character: '尸',
-  pinyin: 'shī ',
-  pinyinWithoutTone: 'shi ',
+  pinyin: 'shī',
+  pinyinWithoutTone: 'shi',
   meaning: 'corpse',
   rank: '762'
 }
@@ -6119,8 +6118,8 @@ export const chinese = [
 ,
 {
   character: '蒂',
-  pinyin: 'dì ',
-  pinyinWithoutTone: 'di ',
+  pinyin: 'dì',
+  pinyinWithoutTone: 'di',
   meaning: 'stem of plant',
   rank: '766'
 }
@@ -6199,8 +6198,8 @@ export const chinese = [
 ,
 {
   character: '糕',
-  pinyin: 'gāo ',
-  pinyinWithoutTone: 'gao ',
+  pinyin: 'gāo',
+  pinyinWithoutTone: 'gao',
   meaning: 'cake',
   rank: '776'
 }
@@ -6319,8 +6318,8 @@ export const chinese = [
 ,
 {
   character: '谋',
-  pinyin: 'móu ',
-  pinyinWithoutTone: 'mou ',
+  pinyin: 'móu',
+  pinyinWithoutTone: 'mou',
   meaning: 'plan; scheme',
   rank: '791'
 }
@@ -6367,8 +6366,8 @@ export const chinese = [
 ,
 {
   character: '咱',
-  pinyin: 'zá/zán ',
-  pinyinWithoutTone: 'za/zan ',
+  pinyin: 'zá/zán',
+  pinyinWithoutTone: 'za/zan',
   meaning: 'we; us',
   rank: '797'
 }
@@ -6575,8 +6574,8 @@ export const chinese = [
 ,
 {
   character: '州',
-  pinyin: 'zhōu ',
-  pinyinWithoutTone: 'zhou ',
+  pinyin: 'zhōu',
+  pinyinWithoutTone: 'zhou',
   meaning: 'a state',
   rank: '823'
 }
@@ -6599,8 +6598,8 @@ export const chinese = [
 ,
 {
   character: '凶',
-  pinyin: 'xiōng ',
-  pinyinWithoutTone: 'xiong ',
+  pinyin: 'xiōng',
+  pinyinWithoutTone: 'xiong',
   meaning: 'culprit; scary',
   rank: '826'
 }
@@ -6672,7 +6671,7 @@ export const chinese = [
 {
   character: '旅',
   pinyin: 'lǚ',
-  pinyinWithoutTone: 'lǚ',
+  pinyinWithoutTone: 'lu',
   meaning: 'journey',
   rank: '835'
 }
@@ -6727,16 +6726,16 @@ export const chinese = [
 ,
 {
   character: '辆',
-  pinyin: 'liàng ',
-  pinyinWithoutTone: 'liang ',
+  pinyin: 'liàng',
+  pinyinWithoutTone: 'liang',
   meaning: 'mw. for vehicles',
   rank: '842'
 }
 ,
 {
   character: '乔',
-  pinyin: 'qiáo ',
-  pinyinWithoutTone: 'qiao ',
+  pinyin: 'qiáo',
+  pinyinWithoutTone: 'qiao',
   meaning: 'tall; lofty',
   rank: '843'
 }
@@ -6775,8 +6774,8 @@ export const chinese = [
 ,
 {
   character: '弗',
-  pinyin: 'fú ',
-  pinyinWithoutTone: 'fu ',
+  pinyin: 'fú',
+  pinyinWithoutTone: 'fu',
   meaning: 'not, negative',
   rank: '848'
 }
@@ -6815,8 +6814,8 @@ export const chinese = [
 ,
 {
   character: '莉',
-  pinyin: 'lì ',
-  pinyinWithoutTone: 'li ',
+  pinyin: 'lì',
+  pinyinWithoutTone: 'li',
   meaning: 'white jasmine',
   rank: '853'
 }
@@ -6943,16 +6942,16 @@ export const chinese = [
 ,
 {
   character: '蠢',
-  pinyin: 'chǔn ',
-  pinyinWithoutTone: 'chun ',
+  pinyin: 'chǔn',
+  pinyinWithoutTone: 'chun',
   meaning: 'stupid',
   rank: '869'
 }
 ,
 {
   character: '丈',
-  pinyin: 'zhàng ',
-  pinyinWithoutTone: 'zhang ',
+  pinyin: 'zhàng',
+  pinyinWithoutTone: 'zhang',
   meaning: 'husband',
   rank: '870'
 }
@@ -7079,16 +7078,16 @@ export const chinese = [
 ,
 {
   character: '鲁',
-  pinyin: 'lǔ ',
-  pinyinWithoutTone: 'lu ',
+  pinyin: 'lǔ',
+  pinyinWithoutTone: 'lu',
   meaning: 'foolish, Shandong',
   rank: '886'
 }
 ,
 {
   character: '疗',
-  pinyin: 'liáo ',
-  pinyinWithoutTone: 'liao ',
+  pinyin: 'liáo',
+  pinyinWithoutTone: 'liao',
   meaning: 'to be healed',
   rank: '887'
 }
@@ -7215,8 +7214,8 @@ export const chinese = [
 ,
 {
   character: '袋',
-  pinyin: 'dài ',
-  pinyinWithoutTone: 'dai ',
+  pinyin: 'dài',
+  pinyinWithoutTone: 'dai',
   meaning: 'pocket',
   rank: '903'
 }
@@ -7231,8 +7230,8 @@ export const chinese = [
 ,
 {
   character: '脏',
-  pinyin: 'zāng ',
-  pinyinWithoutTone: 'zang ',
+  pinyin: 'zāng',
+  pinyinWithoutTone: 'zang',
   meaning: 'dirty',
   rank: '905'
 }
@@ -7247,8 +7246,8 @@ export const chinese = [
 ,
 {
   character: '曼',
-  pinyin: 'màn ',
-  pinyinWithoutTone: 'man ',
+  pinyin: 'màn',
+  pinyinWithoutTone: 'man',
   meaning: 'extended',
   rank: '907'
 }
@@ -7327,8 +7326,8 @@ export const chinese = [
 ,
 {
   character: '甜',
-  pinyin: 'tián ',
-  pinyinWithoutTone: 'tian ',
+  pinyin: 'tián',
+  pinyinWithoutTone: 'tian',
   meaning: 'sweet',
   rank: '917'
 }
@@ -7383,8 +7382,8 @@ export const chinese = [
 ,
 {
   character: '姑',
-  pinyin: 'gū ',
-  pinyinWithoutTone: 'gu ',
+  pinyin: 'gū',
+  pinyinWithoutTone: 'gu',
   meaning: 'aunt',
   rank: '924'
 }
@@ -7455,8 +7454,8 @@ export const chinese = [
 ,
 {
   character: '纽',
-  pinyin: 'niǔ ',
-  pinyinWithoutTone: 'niu ',
+  pinyin: 'niǔ',
+  pinyinWithoutTone: 'niu',
   meaning: 'knot; button; knob',
   rank: '933'
 }
@@ -7479,8 +7478,8 @@ export const chinese = [
 ,
 {
   character: '迹',
-  pinyin: 'jì ',
-  pinyinWithoutTone: 'ji ',
+  pinyin: 'jì',
+  pinyinWithoutTone: 'ji',
   meaning: 'traces',
   rank: '936'
 }
@@ -7495,8 +7494,8 @@ export const chinese = [
 ,
 {
   character: '诞',
-  pinyin: 'dàn ',
-  pinyinWithoutTone: 'dan ',
+  pinyin: 'dàn',
+  pinyinWithoutTone: 'dan',
   meaning: 'give birth',
   rank: '938'
 }
@@ -7511,24 +7510,24 @@ export const chinese = [
 ,
 {
   character: '叔',
-  pinyin: 'shū ',
-  pinyinWithoutTone: 'shu ',
+  pinyin: 'shū',
+  pinyinWithoutTone: 'shu',
   meaning: "father's younger brother",
   rank: '940'
 }
 ,
 {
   character: '捕',
-  pinyin: 'bǔ ',
-  pinyinWithoutTone: 'bu ',
+  pinyin: 'bǔ',
+  pinyinWithoutTone: 'bu',
   meaning: 'to arrest',
   rank: '941'
 }
 ,
 {
   character: '赌',
-  pinyin: 'dǔ ',
-  pinyinWithoutTone: 'du ',
+  pinyin: 'dǔ',
+  pinyinWithoutTone: 'du',
   meaning: 'to gamble',
   rank: '942'
 }
@@ -7623,8 +7622,8 @@ export const chinese = [
 ,
 {
   character: '啡',
-  pinyin: 'fēi ',
-  pinyinWithoutTone: 'fei ',
+  pinyin: 'fēi',
+  pinyinWithoutTone: 'fei',
   meaning: 'coffee; morphine',
   rank: '954'
 }
@@ -7663,8 +7662,8 @@ export const chinese = [
 ,
 {
   character: '咖',
-  pinyin: 'kā ',
-  pinyinWithoutTone: 'ka ',
+  pinyin: 'kā',
+  pinyinWithoutTone: 'ka',
   meaning: 'coffee (phonetic)',
   rank: '959'
 }
@@ -7687,8 +7686,8 @@ export const chinese = [
 ,
 {
   character: '迟',
-  pinyin: 'chí ',
-  pinyinWithoutTone: 'chi ',
+  pinyin: 'chí',
+  pinyinWithoutTone: 'chi',
   meaning: 'late; slow',
   rank: '962'
 }
@@ -7775,8 +7774,8 @@ export const chinese = [
 ,
 {
   character: '扔',
-  pinyin: 'rēng ',
-  pinyinWithoutTone: 'reng ',
+  pinyin: 'rēng',
+  pinyinWithoutTone: 'reng',
   meaning: 'to throw',
   rank: '973'
 }
@@ -7847,8 +7846,8 @@ export const chinese = [
 ,
 {
   character: '腿',
-  pinyin: 'tuǐ ',
-  pinyinWithoutTone: 'tui ',
+  pinyin: 'tuǐ',
+  pinyinWithoutTone: 'tui',
   meaning: 'legs; thighs',
   rank: '982'
 }
@@ -7863,8 +7862,8 @@ export const chinese = [
 ,
 {
   character: '鞋',
-  pinyin: 'xié ',
-  pinyinWithoutTone: 'xie ',
+  pinyin: 'xié',
+  pinyinWithoutTone: 'xie',
   meaning: 'shoes',
   rank: '984'
 }
@@ -7887,8 +7886,8 @@ export const chinese = [
 ,
 {
   character: '妮',
-  pinyin: 'nī ',
-  pinyinWithoutTone: 'ni ',
+  pinyin: 'nī',
+  pinyinWithoutTone: 'ni',
   meaning: 'girl',
   rank: '987'
 }
@@ -7903,8 +7902,8 @@ export const chinese = [
 ,
 {
   character: '誓',
-  pinyin: 'shì ',
-  pinyinWithoutTone: 'shi ',
+  pinyin: 'shì',
+  pinyinWithoutTone: 'shi',
   meaning: 'swear; oath',
   rank: '989'
 }
@@ -7927,8 +7926,8 @@ export const chinese = [
 ,
 {
   character: '抢',
-  pinyin: 'qiǎng ',
-  pinyinWithoutTone: 'qiang ',
+  pinyin: 'qiǎng',
+  pinyinWithoutTone: 'qiang',
   meaning: 'to plunder',
   rank: '992'
 }
@@ -7943,8 +7942,8 @@ export const chinese = [
 ,
 {
   character: '雇',
-  pinyin: 'gù ',
-  pinyinWithoutTone: 'gu ',
+  pinyin: 'gù',
+  pinyinWithoutTone: 'gu',
   meaning: 'to employ',
   rank: '994'
 }
@@ -7959,8 +7958,8 @@ export const chinese = [
 ,
 {
   character: '丹',
-  pinyin: 'dān ',
-  pinyinWithoutTone: 'dan ',
+  pinyin: 'dān',
+  pinyinWithoutTone: 'dan',
   meaning: 'cinnabar',
   rank: '996'
 }
@@ -7991,8 +7990,8 @@ export const chinese = [
 ,
 {
   character: '坦',
-  pinyin: 'tǎn ',
-  pinyinWithoutTone: 'tan ',
+  pinyin: 'tǎn',
+  pinyinWithoutTone: 'tan',
   meaning: 'flat; smooth',
   rank: '1000'
 }
@@ -8087,8 +8086,8 @@ export const chinese = [
 ,
 {
   character: '毫',
-  pinyin: 'háo ',
-  pinyinWithoutTone: 'hao ',
+  pinyin: 'háo',
+  pinyinWithoutTone: 'hao',
   meaning: 'fine hair',
   rank: '1012'
 }
@@ -8183,8 +8182,8 @@ export const chinese = [
 ,
 {
   character: '尝',
-  pinyin: 'cháng ',
-  pinyinWithoutTone: 'chang ',
+  pinyin: 'cháng',
+  pinyinWithoutTone: 'chang',
   meaning: 'taste; experience',
   rank: '1024'
 }
@@ -8263,8 +8262,8 @@ export const chinese = [
 ,
 {
   character: '吻',
-  pinyin: 'wěn ',
-  pinyinWithoutTone: 'wen ',
+  pinyin: 'wěn',
+  pinyinWithoutTone: 'wen',
   meaning: 'kiss; lips',
   rank: '1034'
 }
@@ -8335,8 +8334,8 @@ export const chinese = [
 ,
 {
   character: '爷',
-  pinyin: 'yé ',
-  pinyinWithoutTone: 'ye ',
+  pinyin: 'yé',
+  pinyinWithoutTone: 'ye',
   meaning: 'father; grandfather',
   rank: '1043'
 }
@@ -8351,8 +8350,8 @@ export const chinese = [
 ,
 {
   character: '埃',
-  pinyin: 'āi ',
-  pinyinWithoutTone: 'ai ',
+  pinyin: 'āi',
+  pinyinWithoutTone: 'ai',
   meaning: 'fine dust; dirt',
   rank: '1045'
 }
@@ -8447,8 +8446,8 @@ export const chinese = [
 ,
 {
   character: '裤',
-  pinyin: 'kù ',
-  pinyinWithoutTone: 'ku ',
+  pinyin: 'kù',
+  pinyinWithoutTone: 'ku',
   meaning: 'trousers',
   rank: '1057'
 }
@@ -8487,8 +8486,8 @@ export const chinese = [
 ,
 {
   character: '菲',
-  pinyin: 'fēi ',
-  pinyinWithoutTone: 'fei ',
+  pinyin: 'fēi',
+  pinyinWithoutTone: 'fei',
   meaning: 'fragrant; luxuriant',
   rank: '1062'
 }
@@ -8527,8 +8526,8 @@ export const chinese = [
 ,
 {
   character: '搜',
-  pinyin: 'sōu ',
-  pinyinWithoutTone: 'sou ',
+  pinyin: 'sōu',
+  pinyinWithoutTone: 'sou',
   meaning: 'to seek',
   rank: '1067'
 }
@@ -8599,8 +8598,8 @@ export const chinese = [
 ,
 {
   character: '饼',
-  pinyin: 'bǐng ',
-  pinyinWithoutTone: 'bing ',
+  pinyin: 'bǐng',
+  pinyinWithoutTone: 'bing',
   meaning: 'biscuits',
   rank: '1076'
 }
@@ -8647,8 +8646,8 @@ export const chinese = [
 ,
 {
   character: '糖',
-  pinyin: 'táng ',
-  pinyinWithoutTone: 'tang ',
+  pinyin: 'táng',
+  pinyinWithoutTone: 'tang',
   meaning: 'sugar; sweets',
   rank: '1082'
 }
@@ -8711,8 +8710,8 @@ export const chinese = [
 ,
 {
   character: '戒',
-  pinyin: 'jiè ',
-  pinyinWithoutTone: 'jie ',
+  pinyin: 'jiè',
+  pinyinWithoutTone: 'jie',
   meaning: 'to warn',
   rank: '1090'
 }
@@ -8759,8 +8758,8 @@ export const chinese = [
 ,
 {
   character: '迈',
-  pinyin: 'mài ',
-  pinyinWithoutTone: 'mai ',
+  pinyin: 'mài',
+  pinyinWithoutTone: 'mai',
   meaning: 'to pass by',
   rank: '1096'
 }
@@ -8775,8 +8774,8 @@ export const chinese = [
 ,
 {
   character: '匙',
-  pinyin: 'chí ',
-  pinyinWithoutTone: 'chi ',
+  pinyin: 'chí',
+  pinyinWithoutTone: 'chi',
   meaning: 'spoon',
   rank: '1098'
 }
@@ -8799,8 +8798,8 @@ export const chinese = [
 ,
 {
   character: '秒',
-  pinyin: 'miǎo ',
-  pinyinWithoutTone: 'miao ',
+  pinyin: 'miǎo',
+  pinyinWithoutTone: 'miao',
   meaning: 'a second',
   rank: '1101'
 }
@@ -8831,8 +8830,8 @@ export const chinese = [
 ,
 {
   character: '钥',
-  pinyin: 'yào/yuè ',
-  pinyinWithoutTone: 'yao/yue ',
+  pinyin: 'yào/yuè',
+  pinyinWithoutTone: 'yao/yue',
   meaning: 'key; lock',
   rank: '1105'
 }
@@ -8847,8 +8846,8 @@ export const chinese = [
 ,
 {
   character: '妇',
-  pinyin: 'fù ',
-  pinyinWithoutTone: 'fu ',
+  pinyin: 'fù',
+  pinyinWithoutTone: 'fu',
   meaning: 'married woman',
   rank: '1107'
 }
@@ -8871,16 +8870,16 @@ export const chinese = [
 ,
 {
   character: '劲',
-  pinyin: 'jìn/jìng ',
-  pinyinWithoutTone: 'jin/jing ',
+  pinyin: 'jìn/jìng',
+  pinyinWithoutTone: 'jin/jing',
   meaning: 'strong; tough',
   rank: '1110'
 }
 ,
 {
   character: '帕',
-  pinyin: 'pà ',
-  pinyinWithoutTone: 'pa ',
+  pinyin: 'pà',
+  pinyinWithoutTone: 'pa',
   meaning: 'turban; veil',
   rank: '1111'
 }
@@ -8903,8 +8902,8 @@ export const chinese = [
 ,
 {
   character: '绑',
-  pinyin: 'bǎng ',
-  pinyinWithoutTone: 'bang ',
+  pinyin: 'bǎng',
+  pinyinWithoutTone: 'bang',
   meaning: 'to tie',
   rank: '1114'
 }
@@ -8943,8 +8942,8 @@ export const chinese = [
 ,
 {
   character: '奋',
-  pinyin: 'fèn ',
-  pinyinWithoutTone: 'fen ',
+  pinyin: 'fèn',
+  pinyinWithoutTone: 'fen',
   meaning: 'to strive',
   rank: '1119'
 }
@@ -8999,8 +8998,8 @@ export const chinese = [
 ,
 {
   character: '沃',
-  pinyin: 'wò ',
-  pinyinWithoutTone: 'wo ',
+  pinyin: 'wò',
+  pinyinWithoutTone: 'wo',
   meaning: 'to irrigate',
   rank: '1126'
 }
@@ -9055,8 +9054,8 @@ export const chinese = [
 ,
 {
   character: '瓦',
-  pinyin: 'wǎ ',
-  pinyinWithoutTone: 'wa ',
+  pinyin: 'wǎ',
+  pinyinWithoutTone: 'wa',
   meaning: 'tile; pottery',
   rank: '1133'
 }
@@ -9127,8 +9126,8 @@ export const chinese = [
 ,
 {
   character: '旦',
-  pinyin: 'dàn ',
-  pinyinWithoutTone: 'dan ',
+  pinyin: 'dàn',
+  pinyinWithoutTone: 'dan',
   meaning: 'dawn',
   rank: '1142'
 }
@@ -9183,8 +9182,8 @@ export const chinese = [
 ,
 {
   character: '粉',
-  pinyin: 'fěn ',
-  pinyinWithoutTone: 'fen ',
+  pinyin: 'fěn',
+  pinyinWithoutTone: 'fen',
   meaning: 'powder',
   rank: '1149'
 }
@@ -9263,8 +9262,8 @@ export const chinese = [
 ,
 {
   character: '躲',
-  pinyin: 'duǒ ',
-  pinyinWithoutTone: 'duo ',
+  pinyin: 'duǒ',
+  pinyinWithoutTone: 'duo',
   meaning: 'to hide',
   rank: '1159'
 }
@@ -9311,8 +9310,8 @@ export const chinese = [
 ,
 {
   character: '疼',
-  pinyin: 'téng ',
-  pinyinWithoutTone: 'teng ',
+  pinyin: 'téng',
+  pinyinWithoutTone: 'teng',
   meaning: 'aches; pains',
   rank: '1165'
 }
@@ -9335,8 +9334,8 @@ export const chinese = [
 ,
 {
   character: '碎',
-  pinyin: 'suì ',
-  pinyinWithoutTone: 'sui ',
+  pinyin: 'suì',
+  pinyinWithoutTone: 'sui',
   meaning: 'to break; broken',
   rank: '1168'
 }
@@ -9391,8 +9390,8 @@ export const chinese = [
 ,
 {
   character: '纹',
-  pinyin: 'wén ',
-  pinyinWithoutTone: 'wen ',
+  pinyin: 'wén',
+  pinyinWithoutTone: 'wen',
   meaning: 'line; streak',
   rank: '1175'
 }
@@ -9423,8 +9422,8 @@ export const chinese = [
 ,
 {
   character: '翰',
-  pinyin: 'hàn ',
-  pinyinWithoutTone: 'han ',
+  pinyin: 'hàn',
+  pinyinWithoutTone: 'han',
   meaning: 'writing brush',
   rank: '1179'
 }
@@ -9487,16 +9486,16 @@ export const chinese = [
 ,
 {
   character: '饿',
-  pinyin: 'è ',
-  pinyinWithoutTone: 'e ',
+  pinyin: 'è',
+  pinyinWithoutTone: 'e',
   meaning: 'hungry',
   rank: '1187'
 }
 ,
 {
   character: '砸',
-  pinyin: 'zá ',
-  pinyinWithoutTone: 'za ',
+  pinyin: 'zá',
+  pinyinWithoutTone: 'za',
   meaning: 'to smash',
   rank: '1188'
 }
@@ -9559,8 +9558,8 @@ export const chinese = [
 ,
 {
   character: '墙',
-  pinyin: 'qiáng ',
-  pinyinWithoutTone: 'qiang ',
+  pinyin: 'qiáng',
+  pinyinWithoutTone: 'qiang',
   meaning: 'wall',
   rank: '1196'
 }
@@ -9575,8 +9574,8 @@ export const chinese = [
 ,
 {
   character: '牢',
-  pinyin: 'láo ',
-  pinyinWithoutTone: 'lao ',
+  pinyin: 'láo',
+  pinyinWithoutTone: 'lao',
   meaning: 'prison; stable',
   rank: '1198'
 }
@@ -9591,8 +9590,8 @@ export const chinese = [
 ,
 {
   character: '垃',
-  pinyin: 'lā ',
-  pinyinWithoutTone: 'la ',
+  pinyin: 'lā',
+  pinyinWithoutTone: 'la',
   meaning: 'waste',
   rank: '1200'
 }
@@ -9623,16 +9622,16 @@ export const chinese = [
 ,
 {
   character: '胁',
-  pinyin: 'xié ',
-  pinyinWithoutTone: 'xie ',
+  pinyin: 'xié',
+  pinyinWithoutTone: 'xie',
   meaning: 'ribs; to threaten',
   rank: '1204'
 }
 ,
 {
   character: '圾',
-  pinyin: 'jī ',
-  pinyinWithoutTone: 'ji ',
+  pinyin: 'jī',
+  pinyinWithoutTone: 'ji',
   meaning: 'garbage',
   rank: '1205'
 }
@@ -9647,8 +9646,8 @@ export const chinese = [
 ,
 {
   character: '胸',
-  pinyin: 'xiōng ',
-  pinyinWithoutTone: 'xiong ',
+  pinyin: 'xiōng',
+  pinyinWithoutTone: 'xiong',
   meaning: 'breast; chest',
   rank: '1207'
 }
@@ -9663,16 +9662,16 @@ export const chinese = [
 ,
 {
   character: '孕',
-  pinyin: 'yùn ',
-  pinyinWithoutTone: 'yun ',
+  pinyin: 'yùn',
+  pinyinWithoutTone: 'yun',
   meaning: 'be pregnant',
   rank: '1209'
 }
 ,
 {
   character: '惹',
-  pinyin: 'rě ',
-  pinyinWithoutTone: 're ',
+  pinyin: 'rě',
+  pinyinWithoutTone: 're',
   meaning: 'to irritate',
   rank: '1210'
 }
@@ -9687,8 +9686,8 @@ export const chinese = [
 ,
 {
   character: '逮',
-  pinyin: 'dài ',
-  pinyinWithoutTone: 'dai ',
+  pinyin: 'dài',
+  pinyinWithoutTone: 'dai',
   meaning: 'to seize',
   rank: '1212'
 }
@@ -9711,16 +9710,16 @@ export const chinese = [
 ,
 {
   character: '劫',
-  pinyin: 'jié ',
-  pinyinWithoutTone: 'jie ',
+  pinyin: 'jié',
+  pinyinWithoutTone: 'jie',
   meaning: 'to take by force',
   rank: '1215'
 }
 ,
 {
   character: '袭',
-  pinyin: 'xí ',
-  pinyinWithoutTone: 'xi ',
+  pinyin: 'xí',
+  pinyinWithoutTone: 'xi',
   meaning: 'to raid',
   rank: '1216'
 }
@@ -9743,8 +9742,8 @@ export const chinese = [
 ,
 {
   character: '嫌',
-  pinyin: 'xián ',
-  pinyinWithoutTone: 'xian ',
+  pinyin: 'xián',
+  pinyinWithoutTone: 'xian',
   meaning: 'to hate',
   rank: '1219'
 }
@@ -9759,8 +9758,8 @@ export const chinese = [
 ,
 {
   character: '怖',
-  pinyin: 'bù ',
-  pinyinWithoutTone: 'bu ',
+  pinyin: 'bù',
+  pinyinWithoutTone: 'bu',
   meaning: 'terror; fear',
   rank: '1221'
 }
@@ -9791,16 +9790,16 @@ export const chinese = [
 ,
 {
   character: '琳',
-  pinyin: 'lín ',
-  pinyinWithoutTone: 'lin ',
+  pinyin: 'lín',
+  pinyinWithoutTone: 'lin',
   meaning: 'gem',
   rank: '1225'
 }
 ,
 {
   character: '墨',
-  pinyin: 'mò ',
-  pinyinWithoutTone: 'mo ',
+  pinyin: 'mò',
+  pinyinWithoutTone: 'mo',
   meaning: 'black; corrupt',
   rank: '1226'
 }
@@ -9831,16 +9830,16 @@ export const chinese = [
 ,
 {
   character: '陷',
-  pinyin: 'xiàn ',
-  pinyinWithoutTone: 'xian ',
+  pinyin: 'xiàn',
+  pinyinWithoutTone: 'xian',
   meaning: 'to submerge',
   rank: '1230'
 }
 ,
 {
   character: '蹈',
-  pinyin: 'dǎo ',
-  pinyinWithoutTone: 'dao ',
+  pinyin: 'dǎo',
+  pinyinWithoutTone: 'dao',
   meaning: 'to stamp feet',
   rank: '1231'
 }
@@ -9863,8 +9862,8 @@ export const chinese = [
 ,
 {
   character: '鲍',
-  pinyin: 'bào ',
-  pinyinWithoutTone: 'bao ',
+  pinyin: 'bào',
+  pinyinWithoutTone: 'bao',
   meaning: 'dried fish',
   rank: '1234'
 }
@@ -9887,8 +9886,8 @@ export const chinese = [
 ,
 {
   character: '兹',
-  pinyin: 'zī ',
-  pinyinWithoutTone: 'zi ',
+  pinyin: 'zī',
+  pinyinWithoutTone: 'zi',
   meaning: 'now; here; this',
   rank: '1237'
 }
@@ -9919,24 +9918,24 @@ export const chinese = [
 ,
 {
   character: '逼',
-  pinyin: 'bī ',
-  pinyinWithoutTone: 'bi ',
+  pinyin: 'bī',
+  pinyinWithoutTone: 'bi',
   meaning: 'to pressure',
   rank: '1241'
 }
 ,
 {
   character: '犹',
-  pinyin: 'yóu ',
-  pinyinWithoutTone: 'you ',
+  pinyin: 'yóu',
+  pinyinWithoutTone: 'you',
   meaning: 'like; similar to',
   rank: '1242'
 }
 ,
 {
   character: '扮',
-  pinyin: 'bàn ',
-  pinyinWithoutTone: 'ban ',
+  pinyin: 'bàn',
+  pinyinWithoutTone: 'ban',
   meaning: 'to dress up',
   rank: '1243'
 }
@@ -9951,8 +9950,8 @@ export const chinese = [
 ,
 {
   character: '邀',
-  pinyin: 'yāo ',
-  pinyinWithoutTone: 'yao ',
+  pinyin: 'yāo',
+  pinyinWithoutTone: 'yao',
   meaning: 'to invite',
   rank: '1245'
 }
@@ -9991,16 +9990,16 @@ export const chinese = [
 ,
 {
   character: '叛',
-  pinyin: 'pàn ',
-  pinyinWithoutTone: 'pan ',
+  pinyin: 'pàn',
+  pinyinWithoutTone: 'pan',
   meaning: 'to rebel; rebellion',
   rank: '1250'
 }
 ,
 {
   character: '驾',
-  pinyin: 'jià ',
-  pinyinWithoutTone: 'jia ',
+  pinyin: 'jià',
+  pinyinWithoutTone: 'jia',
   meaning: 'to operate vehicle',
   rank: '1251'
 }
@@ -10015,8 +10014,8 @@ export const chinese = [
 ,
 {
   character: '俄',
-  pinyin: 'é ',
-  pinyinWithoutTone: 'e ',
+  pinyin: 'é',
+  pinyinWithoutTone: 'e',
   meaning: 'sudden(ly), Russia',
   rank: '1253'
 }
@@ -10039,16 +10038,16 @@ export const chinese = [
 ,
 {
   character: '杉',
-  pinyin: 'shān ',
-  pinyinWithoutTone: 'shan ',
+  pinyin: 'shān',
+  pinyinWithoutTone: 'shan',
   meaning: 'pine/fir tree',
   rank: '1256'
 }
 ,
 {
   character: '淘',
-  pinyin: 'táo ',
-  pinyinWithoutTone: 'tao ',
+  pinyin: 'táo',
+  pinyinWithoutTone: 'tao',
   meaning: 'wash in sieve',
   rank: '1257'
 }
@@ -10095,32 +10094,32 @@ export const chinese = [
 ,
 {
   character: '朗',
-  pinyin: 'lǎng ',
-  pinyinWithoutTone: 'lang ',
+  pinyin: 'lǎng',
+  pinyinWithoutTone: 'lang',
   meaning: 'clear; bright',
   rank: '1263'
 }
 ,
 {
   character: '欠',
-  pinyin: 'qiàn ',
-  pinyinWithoutTone: 'qian ',
+  pinyin: 'qiàn',
+  pinyinWithoutTone: 'qian',
   meaning: 'owe; lack',
   rank: '1264'
 }
 ,
 {
   character: '扯',
-  pinyin: 'chě ',
-  pinyinWithoutTone: 'che ',
+  pinyin: 'chě',
+  pinyinWithoutTone: 'che',
   meaning: 'rip up; haul',
   rank: '1265'
 }
 ,
 {
   character: '丑',
-  pinyin: 'chǒu ',
-  pinyinWithoutTone: 'chou ',
+  pinyin: 'chǒu',
+  pinyinWithoutTone: 'chou',
   meaning: 'clown; ugly',
   rank: '1266'
 }
@@ -10135,8 +10134,8 @@ export const chinese = [
 ,
 {
   character: '剂',
-  pinyin: 'jì ',
-  pinyinWithoutTone: 'ji ',
+  pinyin: 'jì',
+  pinyinWithoutTone: 'ji',
   meaning: 'liquid solution',
   rank: '1268'
 }
@@ -10175,16 +10174,16 @@ export const chinese = [
 ,
 {
   character: '厨',
-  pinyin: 'chú ',
-  pinyinWithoutTone: 'chu ',
+  pinyin: 'chú',
+  pinyinWithoutTone: 'chu',
   meaning: 'kitchen',
   rank: '1273'
 }
 ,
 {
   character: '允',
-  pinyin: 'yǔn ',
-  pinyinWithoutTone: 'yun ',
+  pinyin: 'yǔn',
+  pinyinWithoutTone: 'yun',
   meaning: 'to grant',
   rank: '1274'
 }
@@ -10223,24 +10222,24 @@ export const chinese = [
 ,
 {
   character: '怒',
-  pinyin: 'nù ',
-  pinyinWithoutTone: 'nu ',
+  pinyin: 'nù',
+  pinyinWithoutTone: 'nu',
   meaning: 'anger; rage',
   rank: '1279'
 }
 ,
 {
   character: '寓',
-  pinyin: 'yù ',
-  pinyinWithoutTone: 'yu ',
+  pinyin: 'yù',
+  pinyinWithoutTone: 'yu',
   meaning: 'residence',
   rank: '1280'
 }
 ,
 {
   character: '液',
-  pinyin: 'yè ',
-  pinyinWithoutTone: 'ye ',
+  pinyin: 'yè',
+  pinyinWithoutTone: 'ye',
   meaning: 'sap; juice',
   rank: '1281'
 }
@@ -10271,8 +10270,8 @@ export const chinese = [
 ,
 {
   character: '磨',
-  pinyin: 'mó/mò ',
-  pinyinWithoutTone: 'mo/mo ',
+  pinyin: 'mó/mò',
+  pinyinWithoutTone: 'mo/mo',
   meaning: 'grind; rub',
   rank: '1285'
 }
@@ -10287,16 +10286,16 @@ export const chinese = [
 ,
 {
   character: '婊',
-  pinyin: 'biǎo ',
-  pinyinWithoutTone: 'biao ',
+  pinyin: 'biǎo',
+  pinyinWithoutTone: 'biao',
   meaning: 'prostitute',
   rank: '1287'
 }
 ,
 {
   character: '尿',
-  pinyin: 'niào ',
-  pinyinWithoutTone: 'niao ',
+  pinyin: 'niào',
+  pinyinWithoutTone: 'niao',
   meaning: 'urine',
   rank: '1288'
 }
@@ -10311,8 +10310,8 @@ export const chinese = [
 ,
 {
   character: '余',
-  pinyin: 'yú ',
-  pinyinWithoutTone: 'yu ',
+  pinyin: 'yú',
+  pinyinWithoutTone: 'yu',
   meaning: 'surplus',
   rank: '1290'
 }
@@ -10327,16 +10326,16 @@ export const chinese = [
 ,
 {
   character: '娃',
-  pinyin: 'wá ',
-  pinyinWithoutTone: 'wa ',
+  pinyin: 'wá',
+  pinyinWithoutTone: 'wa',
   meaning: 'baby; doll',
   rank: '1292'
 }
 ,
 {
   character: '刑',
-  pinyin: 'xíng ',
-  pinyinWithoutTone: 'xing ',
+  pinyin: 'xíng',
+  pinyinWithoutTone: 'xing',
   meaning: 'to punish',
   rank: '1293'
 }
@@ -10383,8 +10382,8 @@ export const chinese = [
 ,
 {
   character: '傲',
-  pinyin: 'ào ',
-  pinyinWithoutTone: 'ao ',
+  pinyin: 'ào',
+  pinyinWithoutTone: 'ao',
   meaning: 'proud',
   rank: '1299'
 }
@@ -10415,8 +10414,8 @@ export const chinese = [
 ,
 {
   character: '著',
-  pinyin: 'zhù ',
-  pinyinWithoutTone: 'zhu ',
+  pinyin: 'zhù',
+  pinyinWithoutTone: 'zhu',
   meaning: 'manifest',
   rank: '1303'
 }
@@ -10431,8 +10430,8 @@ export const chinese = [
 ,
 {
   character: '矶',
-  pinyin: 'jī ',
-  pinyinWithoutTone: 'ji ',
+  pinyin: 'jī',
+  pinyinWithoutTone: 'ji',
   meaning: 'jetty',
   rank: '1305'
 }
@@ -10455,8 +10454,8 @@ export const chinese = [
 ,
 {
   character: '愚',
-  pinyin: 'yú ',
-  pinyinWithoutTone: 'yu ',
+  pinyin: 'yú',
+  pinyinWithoutTone: 'yu',
   meaning: 'stupid',
   rank: '1308'
 }
@@ -10479,8 +10478,8 @@ export const chinese = [
 ,
 {
   character: '盒',
-  pinyin: 'hé ',
-  pinyinWithoutTone: 'he ',
+  pinyin: 'hé',
+  pinyinWithoutTone: 'he',
   meaning: 'small box',
   rank: '1311'
 }
@@ -10511,8 +10510,8 @@ export const chinese = [
 ,
 {
   character: '爵',
-  pinyin: 'jué ',
-  pinyinWithoutTone: 'jue ',
+  pinyin: 'jué',
+  pinyinWithoutTone: 'jue',
   meaning: 'feudal title',
   rank: '1315'
 }
@@ -10551,8 +10550,8 @@ export const chinese = [
 ,
 {
   character: '夺',
-  pinyin: 'duó ',
-  pinyinWithoutTone: 'duo ',
+  pinyin: 'duó',
+  pinyinWithoutTone: 'duo',
   meaning: 'to take by force',
   rank: '1320'
 }
@@ -10567,8 +10566,8 @@ export const chinese = [
 ,
 {
   character: '俱',
-  pinyin: 'jù ',
-  pinyinWithoutTone: 'ju ',
+  pinyin: 'jù',
+  pinyinWithoutTone: 'ju',
   meaning: 'all; together',
   rank: '1322'
 }
@@ -10583,8 +10582,8 @@ export const chinese = [
 ,
 {
   character: '盗',
-  pinyin: 'dào ',
-  pinyinWithoutTone: 'dao ',
+  pinyin: 'dào',
+  pinyinWithoutTone: 'dao',
   meaning: 'to steal',
   rank: '1324'
 }
@@ -10599,8 +10598,8 @@ export const chinese = [
 ,
 {
   character: '愉',
-  pinyin: 'yú ',
-  pinyinWithoutTone: 'yu ',
+  pinyin: 'yú',
+  pinyinWithoutTone: 'yu',
   meaning: 'pleasant',
   rank: '1326'
 }
@@ -10631,24 +10630,24 @@ export const chinese = [
 ,
 {
   character: '踢',
-  pinyin: 'tī ',
-  pinyinWithoutTone: 'ti ',
+  pinyin: 'tī',
+  pinyinWithoutTone: 'ti',
   meaning: 'kick',
   rank: '1330'
 }
 ,
 {
   character: '憾',
-  pinyin: 'hàn ',
-  pinyinWithoutTone: 'han ',
+  pinyin: 'hàn',
+  pinyinWithoutTone: 'han',
   meaning: 'to regret',
   rank: '1331'
 }
 ,
 {
   character: '汰',
-  pinyin: 'tài ',
-  pinyinWithoutTone: 'tai ',
+  pinyin: 'tài',
+  pinyinWithoutTone: 'tai',
   meaning: 'excessive',
   rank: '1332'
 }
@@ -10663,8 +10662,8 @@ export const chinese = [
 ,
 {
   character: '彻',
-  pinyin: 'chè ',
-  pinyinWithoutTone: 'che ',
+  pinyin: 'chè',
+  pinyinWithoutTone: 'che',
   meaning: 'to penetrate',
   rank: '1334'
 }
@@ -10679,8 +10678,8 @@ export const chinese = [
 ,
 {
   character: '猎',
-  pinyin: 'liè ',
-  pinyinWithoutTone: 'lie ',
+  pinyin: 'liè',
+  pinyinWithoutTone: 'lie',
   meaning: 'to hunt',
   rank: '1336'
 }
@@ -10695,8 +10694,8 @@ export const chinese = [
 ,
 {
   character: '潜',
-  pinyin: 'qián ',
-  pinyinWithoutTone: 'qian ',
+  pinyin: 'qián',
+  pinyinWithoutTone: 'qian',
   meaning: 'to hide; hidden',
   rank: '1338'
 }
@@ -10711,16 +10710,16 @@ export const chinese = [
 ,
 {
   character: '烤',
-  pinyin: 'kǎo ',
-  pinyinWithoutTone: 'kao ',
+  pinyin: 'kǎo',
+  pinyinWithoutTone: 'kao',
   meaning: 'bake; roast',
   rank: '1340'
 }
 ,
 {
   character: '霍',
-  pinyin: 'huò ',
-  pinyinWithoutTone: 'huo ',
+  pinyin: 'huò',
+  pinyinWithoutTone: 'huo',
   meaning: 'quickly',
   rank: '1341'
 }
@@ -10775,8 +10774,8 @@ export const chinese = [
 ,
 {
   character: '吐',
-  pinyin: 'tù ',
-  pinyinWithoutTone: 'tu ',
+  pinyin: 'tù',
+  pinyinWithoutTone: 'tu',
   meaning: 'to vomit',
   rank: '1348'
 }
@@ -10791,16 +10790,16 @@ export const chinese = [
 ,
 {
   character: '宾',
-  pinyin: 'bīn ',
-  pinyinWithoutTone: 'bin ',
+  pinyin: 'bīn',
+  pinyinWithoutTone: 'bin',
   meaning: 'guest; visitor',
   rank: '1350'
 }
 ,
 {
   character: '侦',
-  pinyin: 'zhēn ',
-  pinyinWithoutTone: 'zhen ',
+  pinyin: 'zhēn',
+  pinyinWithoutTone: 'zhen',
   meaning: 'spy',
   rank: '1351'
 }
@@ -10823,8 +10822,8 @@ export const chinese = [
 ,
 {
   character: '罚',
-  pinyin: 'fá ',
-  pinyinWithoutTone: 'fa ',
+  pinyin: 'fá',
+  pinyinWithoutTone: 'fa',
   meaning: 'penalty',
   rank: '1354'
 }
@@ -10855,8 +10854,8 @@ export const chinese = [
 ,
 {
   character: '杜',
-  pinyin: 'dù ',
-  pinyinWithoutTone: 'du ',
+  pinyin: 'dù',
+  pinyinWithoutTone: 'du',
   meaning: 'to prevent',
   rank: '1358'
 }
@@ -10887,8 +10886,8 @@ export const chinese = [
 ,
 {
   character: '盯',
-  pinyin: 'dīng ',
-  pinyinWithoutTone: 'ding ',
+  pinyin: 'dīng',
+  pinyinWithoutTone: 'ding',
   meaning: 'to keep eyes on',
   rank: '1362'
 }
@@ -10903,8 +10902,8 @@ export const chinese = [
 ,
 {
   character: '胆',
-  pinyin: 'dǎn ',
-  pinyinWithoutTone: 'dan ',
+  pinyin: 'dǎn',
+  pinyinWithoutTone: 'dan',
   meaning: 'gall; bravery',
   rank: '1364'
 }
@@ -10927,8 +10926,8 @@ export const chinese = [
 ,
 {
   character: '啤',
-  pinyin: 'pí ',
-  pinyinWithoutTone: 'pi ',
+  pinyin: 'pí',
+  pinyinWithoutTone: 'pi',
   meaning: 'beer',
   rank: '1367'
 }
@@ -10951,8 +10950,8 @@ export const chinese = [
 ,
 {
   character: '胎',
-  pinyin: 'tāi ',
-  pinyinWithoutTone: 'tai ',
+  pinyin: 'tāi',
+  pinyinWithoutTone: 'tai',
   meaning: 'embryo; fetus',
   rank: '1370'
 }
@@ -10975,8 +10974,8 @@ export const chinese = [
 ,
 {
   character: '抛',
-  pinyin: 'pāo ',
-  pinyinWithoutTone: 'pao ',
+  pinyin: 'pāo',
+  pinyinWithoutTone: 'pao',
   meaning: 'throw (away)',
   rank: '1373'
 }
@@ -10999,8 +10998,8 @@ export const chinese = [
 ,
 {
   character: '梯',
-  pinyin: 'tī ',
-  pinyinWithoutTone: 'ti ',
+  pinyin: 'tī',
+  pinyinWithoutTone: 'ti',
   meaning: 'ladder',
   rank: '1376'
 }
@@ -11055,16 +11054,16 @@ export const chinese = [
 ,
 {
   character: '咬',
-  pinyin: 'yǎo ',
-  pinyinWithoutTone: 'yao ',
+  pinyin: 'yǎo',
+  pinyinWithoutTone: 'yao',
   meaning: 'bite; gnaw',
   rank: '1383'
 }
 ,
 {
   character: '祷',
-  pinyin: 'dǎo ',
-  pinyinWithoutTone: 'dao ',
+  pinyin: 'dǎo',
+  pinyinWithoutTone: 'dao',
   meaning: 'to pray',
   rank: '1384'
 }
@@ -11079,16 +11078,16 @@ export const chinese = [
 ,
 {
   character: '蜜',
-  pinyin: 'mì ',
-  pinyinWithoutTone: 'mi ',
+  pinyin: 'mì',
+  pinyinWithoutTone: 'mi',
   meaning: 'honey',
   rank: '1386'
 }
 ,
 {
   character: '耍',
-  pinyin: 'shuǎ ',
-  pinyinWithoutTone: 'shua ',
+  pinyin: 'shuǎ',
+  pinyinWithoutTone: 'shua',
   meaning: 'to frolic',
   rank: '1387'
 }
@@ -11127,8 +11126,8 @@ export const chinese = [
 ,
 {
   character: '鼻',
-  pinyin: 'bí ',
-  pinyinWithoutTone: 'bi ',
+  pinyin: 'bí',
+  pinyinWithoutTone: 'bi',
   meaning: 'nose',
   rank: '1392'
 }
@@ -11159,8 +11158,8 @@ export const chinese = [
 ,
 {
   character: '桑',
-  pinyin: 'sāng ',
-  pinyinWithoutTone: 'sang ',
+  pinyin: 'sāng',
+  pinyinWithoutTone: 'sang',
   meaning: 'mulberry tree',
   rank: '1396'
 }
@@ -11175,8 +11174,8 @@ export const chinese = [
 ,
 {
   character: '泳',
-  pinyin: 'yǒng ',
-  pinyinWithoutTone: 'yong ',
+  pinyin: 'yǒng',
+  pinyinWithoutTone: 'yong',
   meaning: 'to dive; swim',
   rank: '1398'
 }
@@ -11191,8 +11190,8 @@ export const chinese = [
 ,
 {
   character: '尖',
-  pinyin: 'jiān ',
-  pinyinWithoutTone: 'jian ',
+  pinyin: 'jiān',
+  pinyinWithoutTone: 'jian',
   meaning: 'sharp; acute',
   rank: '1400'
 }
@@ -11223,40 +11222,40 @@ export const chinese = [
 ,
 {
   character: '诊',
-  pinyin: 'zhěn ',
-  pinyinWithoutTone: 'zhen ',
+  pinyin: 'zhěn',
+  pinyinWithoutTone: 'zhen',
   meaning: 'to diagnose',
   rank: '1404'
 }
 ,
 {
   character: '嘘',
-  pinyin: 'xū ',
-  pinyinWithoutTone: 'xu ',
+  pinyin: 'xū',
+  pinyinWithoutTone: 'xu',
   meaning: 'to exhale',
   rank: '1405'
 }
 ,
 {
   character: '惧',
-  pinyin: 'jù ',
-  pinyinWithoutTone: 'ju ',
+  pinyin: 'jù',
+  pinyinWithoutTone: 'ju',
   meaning: 'to fear',
   rank: '1406'
 }
 ,
 {
   character: '拯',
-  pinyin: 'zhěng ',
-  pinyinWithoutTone: 'zheng ',
+  pinyin: 'zhěng',
+  pinyinWithoutTone: 'zheng',
   meaning: 'to help; to save',
   rank: '1407'
 }
 ,
 {
   character: '痕',
-  pinyin: 'hén ',
-  pinyinWithoutTone: 'hen ',
+  pinyin: 'hén',
+  pinyinWithoutTone: 'hen',
   meaning: 'scar',
   rank: '1408'
 }
@@ -11303,32 +11302,32 @@ export const chinese = [
 ,
 {
   character: '辣',
-  pinyin: 'là ',
-  pinyinWithoutTone: 'la ',
+  pinyin: 'là',
+  pinyinWithoutTone: 'la',
   meaning: 'hot; spicy',
   rank: '1414'
 }
 ,
 {
   character: '躺',
-  pinyin: 'tǎng ',
-  pinyinWithoutTone: 'tang ',
+  pinyin: 'tǎng',
+  pinyinWithoutTone: 'tang',
   meaning: 'to lie down',
   rank: '1415'
 }
 ,
 {
   character: '祈',
-  pinyin: 'qí ',
-  pinyinWithoutTone: 'qi ',
+  pinyin: 'qí',
+  pinyinWithoutTone: 'qi',
   meaning: 'to pray',
   rank: '1416'
 }
 ,
 {
   character: '肥',
-  pinyin: 'féi ',
-  pinyinWithoutTone: 'fei ',
+  pinyin: 'féi',
+  pinyinWithoutTone: 'fei',
   meaning: 'fat; plump',
   rank: '1417'
 }
@@ -11359,8 +11358,8 @@ export const chinese = [
 ,
 {
   character: '掩',
-  pinyin: 'yǎn ',
-  pinyinWithoutTone: 'yan ',
+  pinyin: 'yǎn',
+  pinyinWithoutTone: 'yan',
   meaning: 'to cover',
   rank: '1421'
 }
@@ -11383,8 +11382,8 @@ export const chinese = [
 ,
 {
   character: '荒',
-  pinyin: 'huāng ',
-  pinyinWithoutTone: 'huang ',
+  pinyin: 'huāng',
+  pinyinWithoutTone: 'huang',
   meaning: 'wasteland',
   rank: '1424'
 }
@@ -11399,8 +11398,8 @@ export const chinese = [
 ,
 {
   character: '撤',
-  pinyin: 'chè ',
-  pinyinWithoutTone: 'che ',
+  pinyin: 'chè',
+  pinyinWithoutTone: 'che',
   meaning: 'to omit',
   rank: '1426'
 }
@@ -11415,8 +11414,8 @@ export const chinese = [
 ,
 {
   character: '辞',
-  pinyin: 'cí ',
-  pinyinWithoutTone: 'ci ',
+  pinyin: 'cí',
+  pinyinWithoutTone: 'ci',
   meaning: 'words',
   rank: '1428'
 }
@@ -11455,8 +11454,8 @@ export const chinese = [
 ,
 {
   character: '擦',
-  pinyin: 'cā ',
-  pinyinWithoutTone: 'ca ',
+  pinyin: 'cā',
+  pinyinWithoutTone: 'ca',
   meaning: 'to wipe',
   rank: '1433'
 }
@@ -11479,16 +11478,16 @@ export const chinese = [
 ,
 {
   character: '姻',
-  pinyin: 'yīn ',
-  pinyinWithoutTone: 'yin ',
+  pinyin: 'yīn',
+  pinyinWithoutTone: 'yin',
   meaning: 'marriage',
   rank: '1436'
 }
 ,
 {
   character: '恢',
-  pinyin: 'huī ',
-  pinyinWithoutTone: 'hui ',
+  pinyin: 'huī',
+  pinyinWithoutTone: 'hui',
   meaning: 'to restore',
   rank: '1437'
 }
@@ -11551,8 +11550,8 @@ export const chinese = [
 ,
 {
   character: '浴',
-  pinyin: 'yù ',
-  pinyinWithoutTone: 'yu ',
+  pinyin: 'yù',
+  pinyinWithoutTone: 'yu',
   meaning: 'to bathe',
   rank: '1445'
 }
@@ -11567,8 +11566,8 @@ export const chinese = [
 ,
 {
   character: '尉',
-  pinyin: 'wèi ',
-  pinyinWithoutTone: 'wei ',
+  pinyin: 'wèi',
+  pinyinWithoutTone: 'wei',
   meaning: 'officer',
   rank: '1447'
 }
@@ -11591,8 +11590,8 @@ export const chinese = [
 ,
 {
   character: '侵',
-  pinyin: 'qīn ',
-  pinyinWithoutTone: 'qin ',
+  pinyin: 'qīn',
+  pinyinWithoutTone: 'qin',
   meaning: 'to invade',
   rank: '1450'
 }
@@ -11615,64 +11614,64 @@ export const chinese = [
 ,
 {
   character: '爬',
-  pinyin: 'pá ',
-  pinyinWithoutTone: 'pa ',
+  pinyin: 'pá',
+  pinyinWithoutTone: 'pa',
   meaning: 'to crawl',
   rank: '1453'
 }
 ,
 {
   character: '挖',
-  pinyin: 'wā ',
-  pinyinWithoutTone: 'wa ',
+  pinyin: 'wā',
+  pinyinWithoutTone: 'wa',
   meaning: 'to dig',
   rank: '1454'
 }
 ,
 {
   character: '骄',
-  pinyin: 'jiāo ',
-  pinyinWithoutTone: 'jiao ',
+  pinyin: 'jiāo',
+  pinyinWithoutTone: 'jiao',
   meaning: 'pride',
   rank: '1455'
 }
 ,
 {
   character: '兽',
-  pinyin: 'shòu ',
-  pinyinWithoutTone: 'shou ',
+  pinyin: 'shòu',
+  pinyinWithoutTone: 'shou',
   meaning: 'beast',
   rank: '1456'
 }
 ,
 {
   character: '嫁',
-  pinyin: 'jià ',
-  pinyinWithoutTone: 'jia ',
+  pinyin: 'jià',
+  pinyinWithoutTone: 'jia',
   meaning: 'to marry',
   rank: '1457'
 }
 ,
 {
   character: '洁',
-  pinyin: 'jié ',
-  pinyinWithoutTone: 'jie ',
+  pinyin: 'jié',
+  pinyinWithoutTone: 'jie',
   meaning: 'clean',
   rank: '1458'
 }
 ,
 {
   character: '晨',
-  pinyin: 'chén ',
-  pinyinWithoutTone: 'chen ',
+  pinyin: 'chén',
+  pinyinWithoutTone: 'chen',
   meaning: 'early morning',
   rank: '1459'
 }
 ,
 {
   character: '喊',
-  pinyin: 'hǎn ',
-  pinyinWithoutTone: 'han ',
+  pinyin: 'hǎn',
+  pinyinWithoutTone: 'han',
   meaning: 'to shout',
   rank: '1460'
 }
@@ -11687,40 +11686,40 @@ export const chinese = [
 ,
 {
   character: '灰',
-  pinyin: 'huī ',
-  pinyinWithoutTone: 'hui ',
+  pinyin: 'huī',
+  pinyinWithoutTone: 'hui',
   meaning: 'ashes',
   rank: '1462'
 }
 ,
 {
   character: '摔',
-  pinyin: 'shuāi ',
-  pinyinWithoutTone: 'shuai ',
+  pinyin: 'shuāi',
+  pinyinWithoutTone: 'shuai',
   meaning: 'to stumble',
   rank: '1463'
 }
 ,
 {
   character: '羞',
-  pinyin: 'xiū ',
-  pinyinWithoutTone: 'xiu ',
+  pinyin: 'xiū',
+  pinyinWithoutTone: 'xiu',
   meaning: 'disgrace; shy',
   rank: '1464'
 }
 ,
 {
   character: '邻',
-  pinyin: 'lín ',
-  pinyinWithoutTone: 'lin ',
+  pinyin: 'lín',
+  pinyinWithoutTone: 'lin',
   meaning: 'neighbour',
   rank: '1465'
 }
 ,
 {
   character: '椅',
-  pinyin: 'yǐ ',
-  pinyinWithoutTone: 'yi ',
+  pinyin: 'yǐ',
+  pinyinWithoutTone: 'yi',
   meaning: 'chair',
   rank: '1466'
 }
@@ -11735,8 +11734,8 @@ export const chinese = [
 ,
 {
   character: '欺',
-  pinyin: 'qī ',
-  pinyinWithoutTone: 'qi ',
+  pinyin: 'qī',
+  pinyinWithoutTone: 'qi',
   meaning: 'cheat',
   rank: '1468'
 }
@@ -11751,8 +11750,8 @@ export const chinese = [
 ,
 {
   character: '贺',
-  pinyin: 'hè ',
-  pinyinWithoutTone: 'he ',
+  pinyin: 'hè',
+  pinyinWithoutTone: 'he',
   meaning: 'congratulate',
   rank: '1470'
 }
@@ -11775,8 +11774,8 @@ export const chinese = [
 ,
 {
   character: '慈',
-  pinyin: 'cí ',
-  pinyinWithoutTone: 'ci ',
+  pinyin: 'cí',
+  pinyinWithoutTone: 'ci',
   meaning: 'kind; charitable',
   rank: '1473'
 }
@@ -11807,24 +11806,24 @@ export const chinese = [
 ,
 {
   character: '逊',
-  pinyin: 'xùn ',
-  pinyinWithoutTone: 'xun ',
+  pinyin: 'xùn',
+  pinyinWithoutTone: 'xun',
   meaning: 'humble; worse',
   rank: '1477'
 }
 ,
 {
   character: '黎',
-  pinyin: 'lí ',
-  pinyinWithoutTone: 'li ',
+  pinyin: 'lí',
+  pinyinWithoutTone: 'li',
   meaning: 'dawn; black',
   rank: '1478'
 }
 ,
 {
   character: '剪',
-  pinyin: 'jiǎn ',
-  pinyinWithoutTone: 'jian ',
+  pinyin: 'jiǎn',
+  pinyinWithoutTone: 'jian',
   meaning: 'scissors',
   rank: '1479'
 }
@@ -11863,8 +11862,8 @@ export const chinese = [
 ,
 {
   character: '裂',
-  pinyin: 'liè ',
-  pinyinWithoutTone: 'lie ',
+  pinyin: 'liè',
+  pinyinWithoutTone: 'lie',
   meaning: 'crack',
   rank: '1484'
 }
@@ -11887,8 +11886,8 @@ export const chinese = [
 ,
 {
   character: '糊',
-  pinyin: 'hù ',
-  pinyinWithoutTone: 'hu ',
+  pinyin: 'hù',
+  pinyinWithoutTone: 'hu',
   meaning: 'paste',
   rank: '1487'
 }
@@ -11903,16 +11902,16 @@ export const chinese = [
 ,
 {
   character: '敲',
-  pinyin: 'qiāo ',
-  pinyinWithoutTone: 'qiao ',
+  pinyin: 'qiāo',
+  pinyinWithoutTone: 'qiao',
   meaning: 'to strike',
   rank: '1489'
 }
 ,
 {
   character: '丧',
-  pinyin: 'sàng ',
-  pinyinWithoutTone: 'sang ',
+  pinyin: 'sàng',
+  pinyinWithoutTone: 'sang',
   meaning: 'to lose',
   rank: '1490'
 }

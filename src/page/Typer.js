@@ -13,6 +13,7 @@ import "./../index.css";
 import BackspaceIcon from "@material-ui/icons/Backspace";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
+import {chineseData} from "./../data/chinesedata";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -171,14 +172,15 @@ export default function Test() {
   };
 
   React.useEffect(() => {
-    axios
+    /*axios
       .get("http://localhost:5000/chinese/")
       .then((response) => {
         setChinese({ chinese: response.data });
       })
       .catch((error) => {
         console.log(error);
-      });
+      });*/
+      setChinese({chinese: chineseData});
   }, []);
 
   React.useEffect(() => {
@@ -187,6 +189,7 @@ export default function Test() {
 
   return (
     <div>
+      <br/><br/><br/>
       {/* Display list of Chinese characters corresponding to user's input */}
       <Grid container className={classes.root2} spacing={2}>
         <Grid item xs={12}>
@@ -223,6 +226,12 @@ export default function Test() {
 
       {/* Display typed Chinese characters */}
       <div className="result2">{result}</div>
+      <div className="instruction">
+        <b>Instructions:</b> <br/>
+        1) Input pinyin. (e.g. type "wo" for 我) <br/>
+        2) Select from the displayed list by pressing on the corresponding number (e.g. 0 for 我) <br/>
+        <b className="redtitle">Disclaimer:</b> Options beyond number 9 are unselectable for now.
+      </div>
     </div>
   );
 }
