@@ -63,6 +63,7 @@ const theme = createMuiTheme({
  * @param {array} props.practice       array containing the selected group and set of character for practice
  */
 export default function TypeAssist(props) {
+  const synth = window.speechSynthesis;
   const { practice, feedback } = props;
   const [selectedCharacter, setSelectedCharacter] = React.useState(0);
   const [inputValue, setInputValue] = React.useState("");
@@ -121,6 +122,20 @@ export default function TypeAssist(props) {
     }
   };
 
+  const speak = (e) => {
+    if (synth.speaking) {
+      console.error('Already speaking...');
+      return;
+    }
+
+    // Get speak text
+    const speakText = new SpeechSynthesisUtterance(chinese.chinese[selectedCharacter].character);
+    // speakText.lang = 'zh-HK';
+    speakText.lang = 'zh-CN';
+
+    synth.speak(speakText)
+  }
+
   React.useEffect(() => {
     const shuffled = shuffle(practice.chinese);
     setChinese({ chinese: shuffled });
@@ -129,7 +144,7 @@ export default function TypeAssist(props) {
   return (
     <div>
       {/*Chinese character display */}
-      <h1>
+      <h1 onClick={speak}>
         {chinese.chinese[selectedCharacter]
           ? chinese.chinese[selectedCharacter].character
           : ""}
